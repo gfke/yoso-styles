@@ -1,0 +1,22 @@
+/**
+ * Spinner definitions
+ */
+.spinner-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999999;
+    display: block;
+    overflow: hidden;
+
+    &.center {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+    }
+}

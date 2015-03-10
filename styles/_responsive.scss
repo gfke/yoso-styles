@@ -1,0 +1,107 @@
+/**
+ * Font Responsive
+ * ---------------
+ * Set REM value responsive to screen resolution size
+ *
+ * Make the font size responsive to the display size.
+ * Using Font Responsive need to use 'rem' units as font size.
+ *
+ *  Responsive font-size
+ *  - - - - - - - - - - - -
+ *  18px   => 112.50%
+ *  16px   => 100.00%
+ *  15px   =>  93.75%
+ *  14px   =>  87.50%
+ *  13px   =>  81.25%
+ *  12px   =>  75.00%
+ *  11px   =>  68.75%
+ *  10px   =>  62.50%
+ *   9px   =>  56.25%
+ *   8px   =>  50.00%
+ *   7px   =>  43.75%
+ *   6px   =>  37.50%
+ */
+
+html {
+    font-size: 100%;
+}
+
+// High resolution (1280+) (100%)
+@media
+    /* small screen, on retina 3x (iPhone 6plus), stuff to override above media query */
+only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: $resolution-large),
+only screen and (min--moz-device-pixel-ratio: 3) and (min-width: $resolution-large),
+only screen and (-o-min-device-pixel-ratio: 3/1) and (min-width: $resolution-large),
+only screen and (min-device-pixel-ratio: 3) and (min-width: $resolution-large),
+only screen and (min-resolution: 401dpi) and (min-width: $resolution-large),
+only screen and (min-resolution: 2dppx) and (min-width: $resolution-large),
+    /* small screens on 96-109ppi, non retina */
+only screen and (min-width: $resolution-large) {
+    html {
+        font-size: 100%;
+    }
+}
+
+// Large resolution (between 1025 and 1280) (87.50%;)
+@media
+    /* small screen, on retina 3x (iPhone 6plus), stuff to override above media query */
+only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: $resolution-large),
+only screen and (min--moz-device-pixel-ratio: 3) and (max-width: $resolution-large),
+only screen and (-o-min-device-pixel-ratio: 3/1) and (max-width: $resolution-large),
+only screen and (min-device-pixel-ratio: 3) and (max-width: $resolution-large),
+only screen and (min-resolution: 401dpi) and (max-width: $resolution-large),
+only screen and (min-resolution: 2dppx) and (max-width: $resolution-large),
+    /* small screens on 96-109ppi, non retina */
+only screen and (max-width: $resolution-large) {
+    html {
+        font-size: 100%;
+    }
+}
+
+// Medium resolution (between 769 and 1024) (81.25%)
+@media
+    /* small screen, on retina 3x (iPhone 6plus), stuff to override above media query */
+only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: $resolution-medium),
+only screen and (min--moz-device-pixel-ratio: 3) and (max-width: $resolution-medium),
+only screen and (-o-min-device-pixel-ratio: 3/1) and (max-width: $resolution-medium),
+only screen and (min-device-pixel-ratio: 3) and (max-width: $resolution-medium),
+only screen and (min-resolution: 401dpi) and (max-width: $resolution-medium),
+only screen and (min-resolution: 2dppx) and (max-width: $resolution-medium),
+    /* small screens on 96-109ppi, non retina */
+only screen and (max-width: $resolution-medium) {
+    html {
+        font-size: 87.50%;
+    }
+}
+
+// Small resolution (between 481 and 768) (75.00%)
+@media
+    /* small screen, on retina 3x (iPhone 6plus), stuff to override above media query */
+only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: $resolution-small),
+only screen and (min--moz-device-pixel-ratio: 3) and (max-width: $resolution-small),
+only screen and (-o-min-device-pixel-ratio: 3/1) and (max-width: $resolution-small),
+only screen and (min-device-pixel-ratio: 3) and (max-width: $resolution-small),
+only screen and (min-resolution: 401dpi) and (max-width: $resolution-small),
+only screen and (min-resolution: 2dppx) and (max-width: $resolution-small),
+    /* small screens on 96-109ppi, non retina */
+only screen and (max-width: $resolution-small) {
+    html {
+        font-size: 75.00%;
+    }
+}
+
+// Mini resolution (480 and smaller) (62.50%)
+@media
+    /* small screen, on retina 3x (iPhone 6plus), stuff to override above media query */
+only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: $resolution-mini),
+only screen and (min--moz-device-pixel-ratio: 3) and (max-width: $resolution-mini),
+only screen and (-o-min-device-pixel-ratio: 3/1) and (max-width: $resolution-mini),
+only screen and (min-device-pixel-ratio: 3) and (max-width: $resolution-mini),
+only screen and (min-resolution: 401dpi) and (max-width: $resolution-mini),
+only screen and (min-resolution: 2dppx) and (max-width: $resolution-mini),
+    /* small screens on 96-109ppi, non retina */
+only screen and (max-width: $resolution-mini) {
+    html {
+        font-size: 62.50%;
+    }
+}

@@ -1,0 +1,45 @@
+/*
+ * Form settings
+ *
+ */
+form {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+ * Fieldset
+ *
+ */
+fieldset {
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+    margin: 0rem 0rem 0.6875rem 0rem;
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/*
+ * Disable blur on elements
+ */
+input, button {
+    &:focus,
+    &:invalid,
+    &:required,
+    &:optional,
+    &:hover {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        outline-color: transparent;
+        outline-style: none;
+    }
+}

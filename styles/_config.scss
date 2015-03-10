@@ -1,0 +1,46 @@
+/*
+ * Configuration File
+ */
+
+/*
+ * Document responsive screen size rules
+ */
+$resolution-mini: 480px;
+$resolution-small: 768px;
+$resolution-medium: 1024px;
+$resolution-large: 1280px;
+
+/*
+ * State Colors
+ */
+$color-state-default: rgb(213, 213, 213);
+$color-state-success: rgb(89, 186, 71);
+$color-state-info: rgb(40, 146, 221);
+$color-state-warning: rgb(226, 155, 49);
+$color-state-danger: rgb(198, 43, 44);
+
+/*
+ * Body variables
+ *
+ */
+$body-font-family: sans-serif;
+$body-font-weight: 300;
+$body-font-color: rgb(0, 0, 0);
+$body-font-size: 1rem;
+$body-background-color: rgb(255, 255, 255);
+
+/*
+ * Headline
+ */
+$h-font-family: 'Roboto', Helvetica, Arial, sans-serif;
+$h-font-weight: 200;
+$h-font-size:   1rem;
+$h-font-color: rgb(0,0,0);
+
+/*
+ * Link
+ */
+$a-link:    rgb(68, 132, 204);
+$a-hover:   $a-link;
+$a-active:  $a-link;
+$a-visited: $a-link;

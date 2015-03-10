@@ -1,0 +1,63 @@
+/*
+ * Spinner Circle
+ *
+ * Displays a rotating light circle with more colored quarter.
+ * For setting light and more colored part, set own class to element and set border color for parent and border-top of element:before.
+ * For setting size of element, expand the font-size attribute.
+ *
+ * Example HTML:
+ *   <div class="spinner-circle my_circle"><div>Loading…</div></div>
+ *
+ * Extend CSS:
+ *   .my_circle {
+ *       font-size: 80px;
+ *       border-color: rgba(0,0,0, 0.3);
+ *   }
+ *
+ *  .my_circle:before {
+ *       border-top-color: rgba(0,0,0, 0.8);
+ *   }
+ */
+
+/*
+ * Animations
+ */
+@keyframes spinner-circle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/*
+ * Spinner
+ */
+.spinner-circle {
+    position:relative;
+    display: block;
+    height: 1em;
+    width: 1em;
+    margin: 0 auto;
+    text-indent: 999em;
+    animation: spinner-circle .6s infinite linear;
+    border: 0.2em solid rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -0.2em;
+        top: -0.2em;
+        height: 100%;
+        width: 100%;
+        border-top: 0.2em solid rgba(255, 255, 255, 0.8);
+        border-left: 0.2em solid transparent;
+        border-bottom: 0.2em solid transparent;
+        border-right: 0.2em solid transparent;
+        border-radius: 100%;
+    }
+}
+

@@ -1,0 +1,51 @@
+/*
+ * Spinner Text
+ *
+ * Displays the specified text with animation to create a spinner effect.
+ * This spinner is only available as mixin!
+ */
+
+/*
+ * Animations
+ */
+@keyframes spinner-text-load {
+    0% {
+        transform: scale(1.15);
+    }
+    50% {
+        transform: scale(1);
+        color: rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        transform: scale(1.15) ;
+    }
+}
+
+/**
+ * Mixin to display written text like "loading" as spinner using css animation.
+ *
+ * @param letters   (integer) Text length
+ * @param timeSteps (integer) Time in ms between letter animation
+ * @param duration  (integer) Duration in ms of the Animation.
+ */
+@mixin spinner-text($_letters: 10, $_timeSteps: 200, $_duration: 0) {
+    display: inline-block;
+
+    @if $_duration == 0 {
+        $_duration: $_letters*$_timeSteps;
+    }
+
+    & > span {
+        display: inline-block;
+        animation-name: spinner-text-load;
+        animation-duration: #{$_duration}ms;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+
+        @for $_i from 0 through $_letters {
+            &:nth-child(#{$_i+1}) {
+                animation-delay: #{$_i*$_timeSteps}ms;
+            }
+        }
+    }
+}

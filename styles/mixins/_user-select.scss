@@ -1,0 +1,16 @@
+/*
+ * user-select
+ *
+ * Determines whether a user can select the content of an element.
+ *
+ * Possible values:
+ *  auto      The user can select content in the element.
+ *  none      The user cannot select any content.
+ *  text      The user can select text in the element.
+ */
+
+@mixin user-select($value) {
+    -webkit-touch-callout: $value;
+    -khtml-user-select: $value;
+    user-select: $value;
+}

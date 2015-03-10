@@ -1,0 +1,96 @@
+/*
+ * Spinner Water Drop
+ *
+ * Displays two expanding circles like drop fall on water.
+ * For setting circle color, set own class to element and set border color for inside span element.
+ * The third span for display text is nor required
+ *
+ * Example HTML:
+ *   <div class="spinner-waterdrop my_waterdrop"><span></span><span></span><span>Loading…</span></div>
+ *
+ * Extend CSS:
+ *   .my_waterdrop {
+ *       font-size: 200px;
+ *   }
+ *
+ *   .my_waterdrop span {
+ *       border-color: rgb(200, 0, 100);
+ *   }
+ */
+
+/*
+ * Animations
+ */
+@keyframes spinner-waterdrop-fade{
+    0%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+@keyframes spinner-waterdrop-fade-small{
+    0%{
+        transform: scale(.5);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/*
+ * Spinner
+ */
+.spinner-waterdrop {
+    position: absolute;
+    font-size: 5em;
+
+    &.page-center{
+        position: relative;
+        width: 25%;
+        height: 25%;
+    }
+
+    span {
+        box-sizing: border-box;
+        position:absolute;
+        background: transparent;
+        border-radius: 50%;
+        text-indent: 999em;
+        color: rgb(255, 255, 255);
+        border-color: rgb(255, 255, 255);
+
+        &:nth-child(1) {
+            width: 1.5em;
+            height: 1.5em;
+            border-width: 2px;
+            border-style: solid;
+            top: 0.75em;
+            left: 0.75em;
+            animation: ease spinner-waterdrop-fade-small 2s infinite;
+        }
+
+
+        &:nth-child(2) {
+            width: 3em;
+            height: 3em;
+            border-width: 2px;
+            border-style: solid;
+            top:0;
+            animation: ease spinner-waterdrop-fade 4s infinite;
+        }
+
+        &:nth-child(3) {
+            width: 10.5em;
+            height: 10.5em;
+            line-height: 10.5em;
+            text-align: center;
+            font-size: 0.3em;
+            text-indent: 0em;
+        }
+    }
+}

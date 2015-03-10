@@ -1,0 +1,29 @@
+{
+  "name": "yoso-styles",
+  "description": "Styling package for yoso components.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/doroppu/yoso-style",
+  "bugs": "https://github.com/doroppu/yoso-style/issues",
+  "license": "none",
+  "style": "styles/yoso.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doroppu/yoso-styles"
+  },
+  "author": {
+    "name": "Jan Nahody",
+    "email": "jan.nahody@gmail.com",
+    "url": "https://github.com/nahody"
+  },
+  "contributors": [],
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  },
+  "browserify": {
+    "transform": ["partialify"]
+  }
+}
