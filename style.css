@@ -91,11 +91,8 @@ html {
 .float-left {
   float: left; }
 
-.floar-right {
+.float-right {
   float: right; }
-
-.floar-center {
-  float: center; }
 
 .spinner-wrapper {
   position: fixed;
