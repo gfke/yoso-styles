@@ -1,68 +1,263 @@
-/*
-Error: File to import not found or unreadable: config.
-       Load paths:
-         
-        on line 1 of styles/yoso.scss
-        from line 1 of style.scss
+html {
+  height: 100%;
+  width: 100%; }
 
-1: @import "styles/yoso";
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: white; }
 
-Backtrace:
-styles/yoso.scss:1
-style.scss:1
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/import_node.rb:66:in `rescue in import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/import_node.rb:45:in `import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:325:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/engine.rb:285:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/exec/sass_scss.rb:361:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.11/bin/scss:13:in `<top (required)>'
-/usr/bin/scss:23:in `load'
-/usr/bin/scss:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: config.\A        Load paths:\A          \A         on line 1 of styles/yoso.scss\A         from line 1 of style.scss\A \A 1: @import \"styles/yoso\";"; }
+main {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box; }
+
+section {
+  box-sizing: border-box; }
+
+a {
+  color: #4484cc;
+  text-decoration: none;
+  outline: none; }
+  a:link {
+    color: #4484cc;
+    outline: none; }
+  a:hover {
+    color: #4484cc;
+    outline: none; }
+  a:active {
+    color: #4484cc;
+    outline: none; }
+  a:visited {
+    color: #4484cc;
+    outline: none; }
+  a:focus {
+    color: #4484cc;
+    outline: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  color: black;
+  margin: 0;
+  padding: 0; }
+
+h3 {
+  font-size: 1.375rem;
+  font-weight: 200; }
+
+img {
+  vertical-align: middle; }
+
+html {
+  font-size: 100%; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 1280px), only screen and (min--moz-device-pixel-ratio: 3) and (min-width: 1280px), only screen and (-o-min-device-pixel-ratio: 3 / 1) and (min-width: 1280px), only screen and (min-device-pixel-ratio: 3) and (min-width: 1280px), only screen and (min-resolution: 401dpi) and (min-width: 1280px), only screen and (min-resolution: 2dppx) and (min-width: 1280px), only screen and (min-width: 1280px) {
+  html {
+    font-size: 100%; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: 1280px), only screen and (min--moz-device-pixel-ratio: 3) and (max-width: 1280px), only screen and (-o-min-device-pixel-ratio: 3 / 1) and (max-width: 1280px), only screen and (min-device-pixel-ratio: 3) and (max-width: 1280px), only screen and (min-resolution: 401dpi) and (max-width: 1280px), only screen and (min-resolution: 2dppx) and (max-width: 1280px), only screen and (max-width: 1280px) {
+  html {
+    font-size: 100%; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 3) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 3 / 1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 3) and (max-width: 1024px), only screen and (min-resolution: 401dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px), only screen and (max-width: 1024px) {
+  html {
+    font-size: 87.50%; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: 768px), only screen and (min--moz-device-pixel-ratio: 3) and (max-width: 768px), only screen and (-o-min-device-pixel-ratio: 3 / 1) and (max-width: 768px), only screen and (min-device-pixel-ratio: 3) and (max-width: 768px), only screen and (min-resolution: 401dpi) and (max-width: 768px), only screen and (min-resolution: 2dppx) and (max-width: 768px), only screen and (max-width: 768px) {
+  html {
+    font-size: 75.00%; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: 480px), only screen and (min--moz-device-pixel-ratio: 3) and (max-width: 480px), only screen and (-o-min-device-pixel-ratio: 3 / 1) and (max-width: 480px), only screen and (min-device-pixel-ratio: 3) and (max-width: 480px), only screen and (min-resolution: 401dpi) and (max-width: 480px), only screen and (min-resolution: 2dppx) and (max-width: 480px), only screen and (max-width: 480px) {
+  html {
+    font-size: 62.50%; } }
+.invisible {
+  visibility: hidden; }
+
+.hidden {
+  display: none; }
+
+.align-center {
+  text-align: center; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.float-left {
+  float: left; }
+
+.floar-right {
+  float: right; }
+
+.floar-center {
+  float: center; }
+
+.spinner-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999;
+  display: block;
+  overflow: hidden; }
+  .spinner-wrapper.center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center; }
+
+@keyframes spinner-ball-bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0); }
+  40% {
+    transform: scale(1); } }
+.spinner-ball {
+  width: 100%;
+  text-align: center; }
+  .spinner-ball > span {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+    background-color: white;
+    animation: spinner-ball-bouncedelay 1.4s infinite ease-in-out;
+    animation-fill-mode: both; }
+    .spinner-ball > span:nth-child(1) {
+      animation-delay: -0.32s; }
+    .spinner-ball > span:nth-child(2) {
+      animation-delay: -0.16s; }
+
+@keyframes spinner-text-load {
+  0% {
+    transform: scale(1.15); }
+  50% {
+    transform: scale(1);
+    color: rgba(255, 255, 255, 0.1); }
+  100% {
+    transform: scale(1.15); } }
+@keyframes spinner-progress-spin {
+  to {
+    transform: rotate(1turn); } }
+.spinner-progress {
+  position: relative;
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  margin: 0 .5em;
+  font-size: 40px;
+  text-indent: 999em;
+  overflow: hidden;
+  animation: spinner-progress-spin 1s infinite steps(8); }
+  .spinner-progress:before, .spinner-progress:after, .spinner-progress > div:before, .spinner-progress > div:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 2.25em;
+    width: .5em;
+    height: 1.5em;
+    border-radius: .2em;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 3.5em rgba(255, 255, 255, 0.2);
+    transform-origin: 50% 2.5em; }
+  .spinner-progress:before {
+    background-color: white; }
+  .spinner-progress:after {
+    transform: rotate(-45deg);
+    background-color: rgba(255, 255, 255, 0.8); }
+  .spinner-progress > div:before {
+    transform: rotate(-90deg);
+    background-color: rgba(255, 255, 255, 0.6); }
+  .spinner-progress > div:after {
+    transform: rotate(-135deg);
+    background-color: rgba(255, 255, 255, 0.4); }
+
+@keyframes spinner-circle {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+.spinner-circle {
+  position: relative;
+  display: block;
+  height: 1em;
+  width: 1em;
+  margin: 0 auto;
+  text-indent: 999em;
+  animation: spinner-circle .6s infinite linear;
+  border: 0.2em solid rgba(255, 255, 255, 0.3);
+  border-radius: 100%; }
+  .spinner-circle:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -0.2em;
+    top: -0.2em;
+    height: 100%;
+    width: 100%;
+    border-top: 0.2em solid rgba(255, 255, 255, 0.8);
+    border-left: 0.2em solid transparent;
+    border-bottom: 0.2em solid transparent;
+    border-right: 0.2em solid transparent;
+    border-radius: 100%; }
+
+@keyframes spinner-waterdrop-fade {
+  0% {
+    transform: scale(0);
+    opacity: 1; }
+  100% {
+    transform: scale(1.5);
+    opacity: 0; } }
+@keyframes spinner-waterdrop-fade-small {
+  0% {
+    transform: scale(0.5);
+    opacity: 1; }
+  100% {
+    transform: scale(3);
+    opacity: 0; } }
+.spinner-waterdrop {
+  position: absolute;
+  font-size: 5em; }
+  .spinner-waterdrop.page-center {
+    position: relative;
+    width: 25%;
+    height: 25%; }
+  .spinner-waterdrop span {
+    box-sizing: border-box;
+    position: absolute;
+    background: transparent;
+    border-radius: 50%;
+    text-indent: 999em;
+    color: white;
+    border-color: white; }
+    .spinner-waterdrop span:nth-child(1) {
+      width: 1.5em;
+      height: 1.5em;
+      border-width: 2px;
+      border-style: solid;
+      top: 0.75em;
+      left: 0.75em;
+      animation: ease spinner-waterdrop-fade-small 2s infinite; }
+    .spinner-waterdrop span:nth-child(2) {
+      width: 3em;
+      height: 3em;
+      border-width: 2px;
+      border-style: solid;
+      top: 0;
+      animation: ease spinner-waterdrop-fade 4s infinite; }
+    .spinner-waterdrop span:nth-child(3) {
+      width: 10.5em;
+      height: 10.5em;
+      line-height: 10.5em;
+      text-align: center;
+      font-size: 0.3em;
+      text-indent: 0em; }
+
+/*# sourceMappingURL=style.css.map */
