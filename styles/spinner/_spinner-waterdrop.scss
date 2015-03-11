@@ -1,26 +1,26 @@
-/*
- * Spinner Water Drop
- *
- * Displays two expanding circles like drop fall on water.
- * For setting circle color, set own class to element and set border color for inside span element.
- * The third span for display text is nor required
- *
- * Example HTML:
- *   <div class="spinner-waterdrop my_waterdrop"><span></span><span></span><span>Loading…</span></div>
- *
- * Extend CSS:
- *   .my_waterdrop {
- *       font-size: 200px;
- *   }
- *
- *   .my_waterdrop span {
- *       border-color: rgb(200, 0, 100);
- *   }
- */
+//
+// Spinner Water Drop
+//
+// Displays two expanding circles like drop fall on water.
+// For setting circle color, set own class to element and set border color for inside span element.
+// The third span for display text is nor required
+//
+// Example HTML:
+//   <div class="spinner-waterdrop my_waterdrop"><span></span><span></span><span>Loading…</span></div>
+//
+// Extend CSS:
+//   .my_waterdrop {
+//       font-size: 200px;
+//   }
+//
+//   .my_waterdrop span {
+//       border-color: rgb(200, 0, 100);
+//   }
 
-/*
- * Animations
- */
+
+//
+// Animations
+
 @keyframes spinner-waterdrop-fade{
     0%{
         transform: scale(0);
@@ -42,9 +42,9 @@
     }
 }
 
-/*
- * Spinner
- */
+//
+// Spinner
+
 .spinner-waterdrop {
     position: absolute;
     font-size: 5em;

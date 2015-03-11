@@ -1,6 +1,4 @@
-/*
- * Helper for HTML states.
- */
+// Helper for HTML states.
 
 .invisible {
     visibility: hidden;
@@ -10,9 +8,7 @@
     display: none;
 }
 
-/*
- * alignments
- */
+// alignments
 .align-center {
     text-align: center;
 }
@@ -25,9 +21,7 @@
     text-align: right;
 }
 
-/*
- * floating
- */
+// floating
 .float-left {
     float: left;
 }

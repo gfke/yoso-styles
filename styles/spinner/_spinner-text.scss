@@ -1,13 +1,13 @@
-/*
- * Spinner Text
- *
- * Displays the specified text with animation to create a spinner effect.
- * This spinner is only available as mixin!
- */
+//
+// Spinner Text
+//
+// Displays the specified text with animation to create a spinner effect.
+// This spinner is only available as mixin!
 
-/*
- * Animations
- */
+
+//
+// Animations
+
 @keyframes spinner-text-load {
     0% {
         transform: scale(1.15);
@@ -21,13 +21,13 @@
     }
 }
 
-/**
- * Mixin to display written text like "loading" as spinner using css animation.
- *
- * @param letters   (integer) Text length
- * @param timeSteps (integer) Time in ms between letter animation
- * @param duration  (integer) Duration in ms of the Animation.
- */
+//*
+// Mixin to display written text like "loading" as spinner using css animation.
+//
+// @param letters   (integer) Text length
+// @param timeSteps (integer) Time in ms between letter animation
+// @param duration  (integer) Duration in ms of the Animation.
+
 @mixin spinner-text($_letters: 10, $_timeSteps: 200, $_duration: 0) {
     display: inline-block;
 

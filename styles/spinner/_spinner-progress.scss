@@ -1,30 +1,30 @@
-/*
- * Spinner progress
- *
- * Displays clock layout spinner rotating clockwise.
- * For setting bubble color, set own class to element and set background color for sub element.
- *
- * Example HTML:
- *   <div class="spinner-progress"><div>Loading…</div></div>
- *
- */
+//
+// Spinner progress
+//
+// Displays clock layout spinner rotating clockwise.
+// For setting bubble color, set own class to element and set background color for sub element.
+//
+// Example HTML:
+//   <div class="spinner-progress"><div>Loading…</div></div>
+//
 
-/*
- * Variables
- */
+
+//
+// Variables
+
 $spinner-progress-color: rgb(255, 255, 255);
 
-/*
- * Animations
- */
+//
+// Animations
+
 @keyframes spinner-progress-spin {
     to { transform: rotate(1turn); }
 }
 
 
-/*
- * Spinner
- */
+//
+// Spinner
+
 .spinner-progress {
     position: relative;
     display: inline-block;
@@ -43,13 +43,13 @@ $spinner-progress-color: rgb(255, 255, 255);
         content: '';
         position: absolute;
         top: 0;
-        left: 2.25em; /* (container width - part width)/2  */
+        left: 2.25em; // (container width - part width)/2
         width: .5em;
         height: 1.5em;
         border-radius: .2em;
         background-color: rgba($spinner-progress-color, 0.2);
-        box-shadow: 0 3.5em rgba($spinner-progress-color, 0.2); /* container height - part height */
-        transform-origin: 50% 2.5em; /* container height / 2 */
+        box-shadow: 0 3.5em rgba($spinner-progress-color, 0.2); // container height - part height
+        transform-origin: 50% 2.5em; // container height / 2
     }
 
     &:before {

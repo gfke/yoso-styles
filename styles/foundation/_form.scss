@@ -1,7 +1,7 @@
-/*
- * Form settings
- *
- */
+//
+// Form settings
+//
+
 form {
     position: relative;
     box-sizing: border-box;
@@ -9,10 +9,10 @@ form {
     margin: 0;
 }
 
-/*
- * Fieldset
- *
- */
+//
+// Fieldset
+//
+
 fieldset {
     display: block;
     box-sizing: border-box;
@@ -21,14 +21,14 @@ fieldset {
     margin: 0rem 0rem 0.6875rem 0rem;
 }
 
-/* A hack for HTML5 contenteditable attribute on mobile */
+// A hack for HTML5 contenteditable attribute on mobile
 textarea[contenteditable] {
     -webkit-appearance: none;
 }
 
-/*
- * Disable blur on elements
- */
+//
+// Disable blur on elements
+
 input, button {
     &:focus,
     &:invalid,

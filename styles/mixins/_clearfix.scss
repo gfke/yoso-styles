@@ -1,8 +1,8 @@
-/*
- * Clearfix
- *
- * Clear floating after this element.
- */
+//
+// Clearfix
+//
+// Clear floating after this element.
+
 @mixin clearfix() {
     &::before,
     &::after {

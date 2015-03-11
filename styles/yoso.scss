@@ -1,11 +1,11 @@
 @import 'config';
 
-/* Mixins */
+// Mixins
 @import 'mixins/clearfix';
 @import 'mixins/user-select';
 
 
-/* Foundation */
+// Foundation
 @import 'foundation/html';
 @import 'foundation/body';
 @import 'foundation/main';
@@ -16,12 +16,12 @@
 @import 'foundation/hr';
 @import 'foundation/image';
 
-/*  */
+//
 @import 'responsive';
 @import 'helper';
 
 
-/* spinner */
+// spinner
 @import "spinner/spinner";
 @import "spinner/spinner-ball";
 @import "spinner/spinner-text";
