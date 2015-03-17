@@ -1,0 +1,10 @@
+// Detection for ECMAScript
+
+body .no-js {
+    display: none;
+}
+
+html.no-js .no-js {
+    display: block;
+}
+

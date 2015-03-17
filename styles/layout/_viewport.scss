@@ -1,0 +1,60 @@
+// Global viewport settingg
+.viewport {
+
+    &--row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: stretch;
+        overflow: hidden;
+
+        &-center {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+            align-content: stretch;
+            align-items: center;
+            overflow: hidden;
+        }
+    }
+
+    &--column {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: stretch;
+        overflow: hidden;
+
+        &-center {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center;
+            align-content: stretch;
+            align-items: center;
+            overflow: hidden;
+        }
+    }
+
+    &__flexitem {
+        flex: 1 0 auto;
+        align-self: auto;
+    }
+
+    &__item {
+        flex: 0.00001 0 auto;
+        align-self: auto;
+    }
+}
+
+.view {
+    &--stretch {
+        width: 100vw;
+        height: 100vh;
+    }
+}

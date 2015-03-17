@@ -55,6 +55,12 @@ h3 {
 img {
   vertical-align: middle; }
 
+body .no-js {
+  display: none; }
+
+html.no-js .no-js {
+  display: block; }
+
 html {
   font-size: 100%; }
 
@@ -73,6 +79,49 @@ html {
 @media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: 480px), only screen and (min--moz-device-pixel-ratio: 3) and (max-width: 480px), only screen and (-o-min-device-pixel-ratio: 3 / 1) and (max-width: 480px), only screen and (min-device-pixel-ratio: 3) and (max-width: 480px), only screen and (min-resolution: 401dpi) and (max-width: 480px), only screen and (min-resolution: 2dppx) and (max-width: 480px), only screen and (max-width: 480px) {
   html {
     font-size: 62.50%; } }
+.viewport--row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  overflow: hidden; }
+  .viewport--row-center {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    overflow: hidden; }
+.viewport--column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  overflow: hidden; }
+  .viewport--column-center {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    overflow: hidden; }
+.viewport__flexitem {
+  flex: 1 0 auto;
+  align-self: auto; }
+.viewport__item {
+  flex: 0.00001 0 auto;
+  align-self: auto; }
+
+.view--stretch {
+  width: 100vw;
+  height: 100vh; }
+
 .invisible {
   visibility: hidden; }
 
@@ -256,5 +305,11 @@ html {
       text-align: center;
       font-size: 0.3em;
       text-indent: 0em; }
+
+.navigation {
+  background-color: lightblue; }
+
+.content {
+  background-color: aquamarine; }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,9 +16,11 @@
 @import 'foundation/hr';
 @import 'foundation/image';
 
-//
-@import 'responsive';
-@import 'helper';
+// Layout
+@import 'layout/browsehappy';
+@import 'layout/responsive';
+@import 'layout/viewport';
+@import 'layout/helper';
 
 
 // spinner
@@ -28,3 +30,14 @@
 @import "spinner/spinner-progress";
 @import "spinner/spinner-circle";
 @import "spinner/spinner-waterdrop";
+
+
+
+
+.navigation {
+    background-color: lightblue;
+}
+
+.content {
+    background-color: aquamarine;
+}
