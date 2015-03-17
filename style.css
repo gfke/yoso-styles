@@ -122,6 +122,98 @@ html {
   width: 100vw;
   height: 100vh; }
 
+/*
+ * Yoso Fieldset
+ *
+ * Override the default input and button elements.
+ */
+.yoso-fieldset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 1em;
+  box-sizing: border-box; }
+  .yoso-fieldset input {
+    border: none;
+    width: 100%;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    font-weight: 200;
+    padding: 0.5rem 0.6rem;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: transparent; }
+  .yoso-fieldset .pre-field {
+    flex: 0 1 auto;
+    align-self: auto;
+    box-sizing: border-box; }
+    .yoso-fieldset .pre-field svg {
+      margin-top: 0.6rem;
+      width: 2.6rem;
+      height: 1.3rem; }
+      .yoso-fieldset .pre-field svg path {
+        fill: #e5e5e5; }
+  .yoso-fieldset .field {
+    flex: 1 1 auto;
+    align-self: auto;
+    box-sizing: border-box; }
+  .yoso-fieldset .post-field {
+    flex: 0 1 auto;
+    align-self: auto;
+    box-sizing: border-box; }
+    .yoso-fieldset .post-field .state-icons svg {
+      margin-top: 0.6rem;
+      width: 1.3rem;
+      height: 1.3rem; }
+      .yoso-fieldset .post-field .state-icons svg path {
+        fill: #e5e5e5; }
+    .yoso-fieldset .post-field .state-icons.info svg path {
+      fill: #2892dd; }
+    .yoso-fieldset .post-field .state-icons.success svg path {
+      fill: #59ba47; }
+    .yoso-fieldset .post-field .state-icons.warning svg path {
+      fill: #e29b31; }
+    .yoso-fieldset .post-field .state-icons.error svg path {
+      fill: #c62b2c; }
+  .yoso-fieldset.line {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 0.5em; }
+
+.yoso-fieldhint {
+  text-align: right;
+  color: #d5d5d5; }
+  .yoso-fieldhint.error {
+    color: #c62b2c; }
+  .yoso-fieldhint.success {
+    color: #59ba47; }
+  .yoso-fieldhint.info {
+    color: #2892dd; }
+  .yoso-fieldhint.warning {
+    color: #e29b31; }
+
+.yoso-button {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0.8rem 0.6rem;
+  border: 1px solid #e5e5e5;
+  background-color: #e5e5e5;
+  color: #5b5b5b;
+  border-radius: 6px;
+  font-size: 1.2em; }
+  .yoso-button.primary {
+    border: 1px solid #539cec;
+    background-color: #539cec;
+    color: white; }
+  .yoso-button:disabled {
+    background-color: white;
+    color: #e5e5e5;
+    border: 1px solid #e5e5e5; }
+
 .invisible {
   visibility: hidden; }
 

@@ -1,0 +1,138 @@
+/*
+ * Yoso Fieldset
+ *
+ * Override the default input and button elements.
+ */
+
+$grey: rgb(229,229,229);
+
+.yoso-fieldset {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    width: 100%;
+    margin-top: 1em;
+    box-sizing: border-box;
+
+    input {
+        border: none;
+        width: 100%;
+        font-size: 1.1em;
+        line-height: 1.4em;
+        font-weight: 200;
+        padding: 0.5rem 0.6rem;
+        box-sizing: border-box;
+        margin: 0;
+        background-color: transparent;
+    }
+
+    .pre-field {
+        flex: 0 1 auto;
+        align-self: auto;
+        box-sizing: border-box;
+
+        svg {
+            margin-top: 0.6rem;
+            width: 2.6rem;
+            height: 1.3rem;
+
+            path {
+                fill: $grey;
+            }
+        }
+    }
+
+    .field {
+        flex: 1 1 auto;
+        align-self: auto;
+        box-sizing: border-box;
+    }
+
+    .post-field {
+        flex: 0 1 auto;
+        align-self: auto;
+        box-sizing: border-box;
+
+
+        .state-icons {
+            svg {
+                margin-top: 0.6rem;
+                width: 1.3rem;
+                height: 1.3rem;
+
+                path {
+                    fill: $grey;
+                }
+            }
+
+            &.info svg path {
+                fill: $color-state-info;
+            }
+
+            &.success svg path {
+                fill: $color-state-success;
+            }
+
+            &.warning svg path {
+                fill: $color-state-warning;
+            }
+
+            &.error svg path {
+                fill: $color-state-danger;
+            }
+        }
+    }
+
+    &.line {
+        border-bottom: 1px solid $grey;
+        margin-bottom: 0.5em;
+    }
+}
+
+.yoso-fieldhint {
+    text-align: right;
+    color: $color-state-default;
+
+    &.error {
+        color: $color-state-danger;
+    }
+
+    &.success {
+        color: $color-state-success;
+    }
+
+    &.info {
+        color: $color-state-info;
+    }
+
+    &.warning {
+        color: $color-state-warning;
+    }
+}
+
+.yoso-button {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0.8rem 0.6rem;
+    border: 1px solid $grey;
+    background-color: $grey;
+    color: rgb(91,91,91);
+    border-radius: 6px;
+    font-size: 1.2em;
+
+    &.primary {
+        border: 1px solid rgb(83, 156, 236);
+        background-color: rgb(83, 156, 236);
+        color: rgb(255, 255, 255);
+    }
+
+    &:disabled {
+        background-color: rgb(255, 255, 255);
+        color: $grey;
+        border: 1px solid $grey;
+    }
+}
