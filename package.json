@@ -5,7 +5,7 @@
   "homepage": "https://github.com/doroppu/yoso-style",
   "bugs": "https://github.com/doroppu/yoso-style/issues",
   "license": "none",
-  "style": "styles/yoso.scss",
+  "main": "styles/yoso.scss",
   "repository": {
     "type": "git",
     "url": "https://github.com/doroppu/yoso-styles"
