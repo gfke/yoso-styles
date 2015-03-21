@@ -69,19 +69,19 @@ $grey: rgb(229,229,229);
             }
 
             &.info svg path {
-                fill: $color-state-info;
+                fill: $color-state--info;
             }
 
             &.success svg path {
-                fill: $color-state-success;
+                fill: $color-state--success;
             }
 
             &.warning svg path {
-                fill: $color-state-warning;
+                fill: $color-state--warning;
             }
 
             &.error svg path {
-                fill: $color-state-danger;
+                fill: $color-state--danger;
             }
         }
     }
@@ -94,22 +94,22 @@ $grey: rgb(229,229,229);
 
 .yoso-fieldhint {
     text-align: right;
-    color: $color-state-default;
+    color: $color-state--default;
 
     &.error {
-        color: $color-state-danger;
+        color: $color-state--danger;
     }
 
     &.success {
-        color: $color-state-success;
+        color: $color-state--success;
     }
 
     &.info {
-        color: $color-state-info;
+        color: $color-state--info;
     }
 
     &.warning {
-        color: $color-state-warning;
+        color: $color-state--warning;
     }
 }
 

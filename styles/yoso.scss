@@ -5,12 +5,14 @@
 @import 'mixins/user-select';
 
 
-// Foundationcd
+// Foundation
 @import 'foundation/html';
 @import 'foundation/body';
 @import 'foundation/main';
 @import 'foundation/section';
-
+@import 'foundation/section';
+@import 'foundation/paragraph';
+@import 'foundation/code';
 @import 'foundation/link';
 @import 'foundation/headline';
 @import 'foundation/hr';
@@ -25,9 +27,9 @@
 
 
 // spinner
-@import "spinner/spinner";
-@import "spinner/spinner-ball";
-@import "spinner/spinner-text";
-@import "spinner/spinner-progress";
-@import "spinner/spinner-circle";
-@import "spinner/spinner-waterdrop";
+@import 'spinner/spinner';
+@import 'spinner/spinner-ball';
+@import 'spinner/spinner-text';
+@import 'spinner/spinner-progress';
+@import 'spinner/spinner-circle';
+@import 'spinner/spinner-waterdrop';

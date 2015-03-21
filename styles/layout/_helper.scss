@@ -1,31 +1,48 @@
-// Helper for HTML states.
+// Yoso helper classes
+.yoso {
 
-.invisible {
-    visibility: hidden;
-}
+    // visibility
+    &--invisible {
+        visibility: hidden;
+    }
 
-.hidden {
-    display: none;
-}
+    &--hidden {
+        display: none;
+    }
 
-// alignments
-.align-center {
-    text-align: center;
-}
+    // alignments
+    &--align-center {
+        text-align: center;
+    }
 
-.align-left {
-    text-align: left;
-}
+    &--align-left {
+        text-align: left;
+    }
 
-.align-right {
-    text-align: right;
-}
+    &--align-right {
+        text-align: right;
+    }
 
-// floating
-.float-left {
-    float: left;
-}
+    // floating
+    &--float-left {
+        float: left;
+    }
 
-.float-right {
-    float: right;
+    &--float-right {
+        float: right;
+    }
+
+    // content padding
+    &__content--pad {
+        padding: 1rem;
+    }
+
+    &__content--pad-vertical {
+        padding: 1rem 0;
+    }
+
+    &__content--pad-horizontal {
+        padding: 0 1rem;
+    }
+
 }

@@ -3,32 +3,32 @@
 
 
 a {
-    color: $a-link;
+    color: $a--link;
     text-decoration: none;
     outline: none;
 
     &:link {
-        color: $a-link;
+        color: $a--link;
         outline: none;
     }
 
     &:hover {
-        color: $a-hover;
+        color: $a--hover;
         outline: none;
     }
 
     &:active {
-        color: $a-active;
+        color: $a--active;
         outline: none;
     }
 
     &:visited {
-        color: $a-visited;
+        color: $a--visited;
         outline: none;
     }
 
     &:focus {
-        color: $a-hover;
+        color: $a--hover;
         outline: none;
     }
 }
