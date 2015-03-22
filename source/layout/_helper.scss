@@ -1,0 +1,57 @@
+// Helper classes
+
+// visibility
+.invisible {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+// alignments
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+// floating
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+// content padding
+.content {
+    &--pad {
+        padding: 1rem;
+    }
+
+    &--pad-vertical {
+        padding: 1rem 0;
+    }
+
+    &--pad-horizontal {
+        padding: 0 1rem;
+    }
+
+    &--middle {
+        max-width: $content--max-width;
+    }
+
+    &--middle-center {
+        max-width: $content--max-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

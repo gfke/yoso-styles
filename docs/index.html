@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="DocsApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Yoso styles</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="yoso.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="modernizr-2.8.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="helper.js"></script>
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    </head>
+    <body ng-controller="DocsCtrl">
+        <div class="no-js">
+            <div class="message">Please enable JavaScript for our Application.</div>
+        </div>
+
+        <main>
+            <div class="viewport--row viewport--fullsize">
+                <div class="navigation viewport__item">
+                    <header ng-click="loadContent('main.html')">header</header>
+                    <ul>
+                        <li ng-click="loadContent('viewport')">Viewport</li>
+                        <li ng-click="loadContent('headlines')">Headlines</li>
+                        <li ng-click="loadContent('blocks')">Blocks</li>
+                        <li ng-click="loadContent('links')">Links</li>
+                        <li ng-click="loadContent('helpers')">Helpers</li>
+                    </ul>
+                </div>
+                <div class="viewport__item--flex">
+                    <header>header</header>
+
+                    <div ng-include="content" class="content--middle"></div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

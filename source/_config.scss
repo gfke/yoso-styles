@@ -30,6 +30,10 @@ $h--font-family:                $font-family--default;
 $h--font-weight:                500;
 $h--font-size:                  1rem;
 $h--font-color:                 rgb(0, 0, 0);
+$h__small--font-weight:         300;
+$h__small--size:                0.8em;
+$h__small--font-color:          rgb(200, 200, 200);
+
 
 // Link
 $a--link:                       rgb(68, 132, 204);
@@ -42,3 +46,8 @@ $a--visited:                    $a--link;
 $code--font-family:             $font-family--monochrome;
 $code--background-color:        $color-state--default;
 $code--color:                   $color-state--info;
+
+
+
+// Helpers
+$content--max-width:            62rem;

@@ -1,6 +1,16 @@
 // Global viewport settingg
 .viewport {
 
+    &--center {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+        overflow: hidden;
+    }
+
     &--row {
         display: flex;
         flex-direction: row;
@@ -46,14 +56,22 @@
         height: 100vh;
     }
 
-    &__flexitem {
+    &__item--flex-min {
+        flex: 0.00001 0 auto;
+        align-self: auto;
+        overflow-y: auto;
+    }
+
+    &__item--flex {
         flex: 1 1 auto;
         align-self: auto;
+        overflow-y: auto;
     }
 
     &__item {
-        flex: 0.00001 0 auto;
+        flex: 0 0 auto;
         align-self: auto;
+        overflow-y: auto;
     }
 
 

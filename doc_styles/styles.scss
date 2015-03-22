@@ -1,0 +1,46 @@
+main pre.prettyprint {
+    border: 0;
+    padding: 0 1rem;
+    overflow: hidden;
+    code {
+        font-size: .7rem;
+    }
+}
+
+
+
+.navigation {
+    background-color: rgb(96, 68, 137);
+    color: rgb(255, 255, 255);
+    min-width: 16rem;
+}
+
+
+#viewport {
+    .example {
+        height: 200px;
+        width: 100%;
+        border: 1px solid rgb(230, 230, 230);
+
+        &.viewport--row {
+            height: 200px;
+            width: 100%;
+        }
+
+        &.viewport--column {
+            height: 200px;
+            width: 100%;
+        }
+    }
+
+    .viewport__item, .viewport__item--flex-min  {
+        background-color: rgb(230, 230, 230);
+    }
+}
+
+
+#headlines {
+    .example {
+        border: 1px solid rgb(230, 230, 230);
+    }
+}

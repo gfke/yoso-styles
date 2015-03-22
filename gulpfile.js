@@ -1,10 +1,11 @@
 var gulp         = require('gulp'),
     del          = require('del'),
-    notify       = require("gulp-notify"),
+    notify       = require('gulp-notify'),
     sass         = require('gulp-sass'),
     scssLint     = require('gulp-scss-lint'),
     rename       = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
+    minifycss    = require('gulp-minify-css')
     connect      = require('gulp-connect'),
     gutil        = require('gulp-util'),
     open         = require('gulp-open');
@@ -27,13 +28,13 @@ function notifyErrors() {
 
 // TASK: clear
 gulp.task('clear', function () {
-    return del(['./test/*.css']);
+    return del(['./docs/*.css']);
 });
 
 
 // TASK: sass
-gulp.task('sass', ['clear'], function () {
-    gulp.src('./styles/*.scss')
+gulp.task('sass', function () {
+    return gulp.src(['./source/*.scss', './doc_styles/*.scss'])
         .pipe(scssLint({
             'config': './lint.yml'
         }))
@@ -46,49 +47,52 @@ gulp.task('sass', ['clear'], function () {
             cascade: false
         }))
         .pipe(rename({
-            dirname: "",
-            //basename: "aloha",
-            //prefix: "bonjour-",
-            //suffix: "-hola",
-            extname: ".css"
+            dirname: '',
+            extname: '.css'
         }))
-        .pipe(gulp.dest('./test'));
+        .pipe(gulp.dest('./docs'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(minifycss())
+        .pipe(gulp.dest('./docs'));
 });
 
 // TASK: http refresh
 gulp.task('http-refresh', function () {
-    gulp.src('./test/index.html')
-        .pipe(connect.reload());
+    return gulp.src('./docs/*.html').pipe(connect.reload());
 });
 
-// TASK: serve
-gulp.task('serve', ['clear', 'sass'], function () {
-    // config
-    var connectConfig = {
-        port: 8090,
-            livereload: {
-            ports: 35729
-        },
-        root: ['./test']
-    };
-
+gulp.task('watch', function () {
     var logFunction = function (event) {
         gutil.log(gutil.colors.green('File ' + event.path + ' was ' + event.type + ', running tasks...'));
     };
 
-    // start http server
-    connect.server(connectConfig);
-
     // Create gulp watcher for scss files
-    gulp.watch(['./styles/**/*.scss'], ['sass']).on('change', logFunction);
+    gulp.watch(['./source/**/*.scss','./doc_styles/**/*.scss'], ['sass']).on('change', logFunction);
 
-    // Create gulp watcher for test files
-    gulp.watch(['./test/**/*'], ['http-refresh']).on('change', logFunction);
+    // Create gulp watcher for docs files
+    gulp.watch('./docs/**/*', ['http-refresh']).on('change', logFunction);
+});
 
-    gulp.src('./test/index.html')
+gulp.task('http', ['sass'], function () {
+    // config
+    var connectConfig = {
+        port: 8090,
+        livereload: {
+            ports: 35729
+        },
+        root: ['./docs']
+    };
+
+    // start http server
+    return connect.server(connectConfig);
+});
+
+// TASK: serve
+gulp.task('serve', ['sass', 'http', 'watch'], function () {
+
+    gulp.src('./docs/index.html')
         .pipe(open('', {
-            url: 'http://localhost:8090'
-            //app: 'firefox'
+            url: 'http://localhost:8090',
+            app: 'Google Chrome'
         }));
-
 });

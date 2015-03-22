@@ -1,0 +1,21 @@
+//
+// Horizontal Line settings
+//
+
+hr {
+    &.space-1, &.space {
+        margin: 1rem 0;
+    }
+
+    &.space-2 {
+        margin: 2rem 0;
+    }
+
+    &.space-3 {
+        margin: 3rem 0;
+    }
+
+    &.no-line {
+        border: 1px solid transparent;
+    }
+}
