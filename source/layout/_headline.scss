@@ -1,9 +1,33 @@
+//
+// Headlines
+//
+
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     small {
         display: block;
-        font-size: $h__small--size;
-        font-weight: $h__small--font-weight;
-        color: $h__small--font-color;
+        font-size: $h-small--size;
+        font-weight: $h-small--font-weight;
+        color: $h-small--font-color;
+    }
+
+    abbr {
+        display: inline-block;
+        font-size: $h-abbr--size;
+        color: $h-abbr--font-color;
+        font-weight: $h-abbr--font-weight;
+    }
+
+    &.capital {
+        text-align: center;
+        border-bottom: $h--border;
+        margin-bottom: 1em;
+        padding-bottom: 0.5em;
+
+        small {
+            color: $h--font-color;
+            margin-top: 0.5em;
+        }
     }
 }

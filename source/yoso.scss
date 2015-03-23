@@ -18,6 +18,9 @@
 @import 'foundation/headline';
 @import 'foundation/hr';
 @import 'foundation/image';
+@import 'foundation/lists';
+@import 'foundation/strong';
+@import 'foundation/tables';
 
 // Layout
 @import 'layout/browsehappy';
@@ -26,6 +29,11 @@
 @import 'layout/headline';
 @import 'layout/fieldset';
 @import 'layout/helper';
+@import 'layout/lists';
+@import 'layout/tables';
+
+
+@import 'layout/angular';
 
 
 // spinner

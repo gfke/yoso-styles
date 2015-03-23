@@ -94,7 +94,7 @@ $grey: rgb(229,229,229);
 
 .yoso-fieldhint {
     text-align: right;
-    color: $color-state--default;
+    color: $color-state--active;
 
     &.error {
         color: $color-state--danger;

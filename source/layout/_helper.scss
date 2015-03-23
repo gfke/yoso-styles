@@ -1,4 +1,7 @@
-// Helper classes
+//
+// Helpers
+//
+
 
 // visibility
 .invisible {
@@ -34,22 +37,22 @@
 // content padding
 .content {
     &--pad {
-        padding: 1rem;
+        padding: $default-padding;
     }
 
     &--pad-vertical {
-        padding: 1rem 0;
+        padding: $default-padding 0;
     }
 
     &--pad-horizontal {
-        padding: 0 1rem;
+        padding: 0 $default-padding;
     }
 
-    &--middle {
+    &--max-size {
         max-width: $content--max-width;
     }
 
-    &--middle-center {
+    &--center {
         max-width: $content--max-width;
         margin-left: auto;
         margin-right: auto;

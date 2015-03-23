@@ -5,34 +5,61 @@ $font-family--default:          Helvetica, Arial, sans-serif;
 $font-family--monochrome:       "Courier New", monospace;
 $font-family--headline:         $font-family--default;
 
+$default-padding:               1rem;
+$default-margin:                1rem;
+
 // Document responsive screen size rules
 $resolution--mini:               480px;
 $resolution--small:              768px;
 $resolution--medium:            1024px;
 $resolution--large:             1280px;
 
+
+
+// Colors
+$color-black:                   rgb(0, 0, 0);
+$color-white:                   rgb(255, 255, 255);
+$color-grey-dark:               rgb(80, 80, 80);
+$color-grey-middle:             rgb(120, 120, 120);
+$color-grey-light:              rgb(225, 225, 225);
+$color-grey-bright:             rgb(244, 244, 244);
+$color-red-dark:                rgb(198, 43, 44);
+$color-blue-bright:             rgb(216, 237, 248);
+$color-green-bright:            rgb(223, 240, 215);
+$color-yellow-bright:           rgb(252, 248, 226);
+$color-red-bright:              rgb(242, 222, 222);
+
+
 // State Colors
-$color-state--default:          rgb(240, 240, 240);
-$color-state--success:          rgb(89, 186, 71);
-$color-state--info:             rgb(40, 146, 221);
-$color-state--warning:          rgb(226, 155, 49);
-$color-state--danger:           rgb(198, 43, 44);
+$color-state--active:           $color-grey-bright;
+$color-state--success:          $color-green-bright;
+$color-state--info:             $color-blue-bright;
+$color-state--warning:          $color-yellow-bright;
+$color-state--danger:           $color-red-bright;
+
 
 // Body variables
 $body--font-family:             $font-family--headline;
 $body--font-weight:             300;
-$body--font-color:              rgb(0, 0, 0);
+$body--font-color:              $color-grey-dark;
 $body--font-size:               1rem;
-$body--background-color:        rgb(255, 255, 255);
+$body--background-color:        $color-white;
 
 // Headline
 $h--font-family:                $font-family--default;
 $h--font-weight:                500;
-$h--font-size:                  1rem;
-$h--font-color:                 rgb(0, 0, 0);
-$h__small--font-weight:         300;
-$h__small--size:                0.8em;
-$h__small--font-color:          rgb(200, 200, 200);
+$h--font-color:                 $color-black;
+$h--border:                     1px solid $color-grey-light;
+$h-small--font-weight:          100;
+$h-small--size:                 .8em;
+$h-small--font-color:           $color-grey-middle;
+$h-abbr--font-weight:           100;
+$h-abbr--size:                  .6em;
+$h-abbr--font-color:            $color-grey-middle;
+
+// Strong
+$strong--font-color:            $color-black;
+$strong--font-weight:           700;
 
 
 // Link
@@ -44,10 +71,34 @@ $a--visited:                    $a--link;
 
 // code
 $code--font-family:             $font-family--monochrome;
-$code--background-color:        $color-state--default;
-$code--color:                   $color-state--info;
+$code--background-color:        $color-grey-bright;
+$code--color:                   $color-red-dark;
 
+// hr
+$hr--color:                     $color-grey-light;
+$hr--line-width:                1px;
 
+// pre
+$pre--background-color:         $color-grey-bright;
+$pre--font-color:               $body--font-color;
 
-// Helpers
+// table
+$table--background-color:       transparent;
+$table--margin:                 0 0 $default-margin 0;
+$table--border-color:           $color-grey-light;
+$table--line-height:            1.45;
+$table--font-size:              1rem;
+
+$table-row--hover-color:        $color-blue-bright;
+
+$table-cell--stripe-color:      $color-grey-light;
+$table-cell--padding:           .5rem;
+
+$table-caption--font-color:     $color-grey-dark;
+$table-caption--alignment:      left;
+
+$table-head--alignment:         left;
+$table-head--font-weight:       700;
+
+    // Helpers
 $content--max-width:            62rem;

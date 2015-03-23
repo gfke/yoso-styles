@@ -1,0 +1,39 @@
+//
+// Tables
+//
+
+table {
+    background-color: $table--background-color;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    // Table cell sizing
+    // Reset default table behavior
+    col[class*="col-"] {
+        position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+        float: none;
+        display: table-column;
+    }
+
+    // Table cell sizing
+    // Reset default table behavior
+    td, th {
+        &[class*="col-"] {
+            position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+            float: none;
+            display: table-cell;
+        }
+    }
+}
+
+caption {
+    padding-top: $table-cell--padding;
+    padding-bottom: $table-cell--padding;
+    color: $table-caption--font-color;
+    text-align: $table-caption--alignment;
+}
+
+th {
+    text-align: $table-head--alignment;
+    font-weight: $table-head--font-weight;
+}

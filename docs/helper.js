@@ -3,7 +3,7 @@ var ngModel = angular.module('DocsApp', [])
         //
     });
 
-ngModel.controller('DocsCtrl', function($scope, $timeout) {
+ngModel.controller('DocsCtrl', function($scope, $timeout, $anchorScroll, $location) {
     $scope.content = 'main.html';
 
     $scope.loadContent = function(template) {
@@ -12,5 +12,14 @@ ngModel.controller('DocsCtrl', function($scope, $timeout) {
             PR.prettyPrint();
         }, 100);
 
-    }
+    };
+
+    $scope.scrollTo = function(anchor) {
+        // set the location.hash to the id of
+        // the element you wish to scroll to.
+        $location.hash(anchor);
+
+        // call $anchorScroll()
+        $anchorScroll();
+    };
 });

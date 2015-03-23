@@ -1,8 +1,15 @@
 //
 // Horizontal Line settings
 //
+// <hr>
+//
+
 
 hr {
+    border: 0;
+    height: $hr--line-width;
+    background-color: $hr--color;
+
     &.space-1, &.space {
         margin: 1rem 0;
     }
@@ -16,6 +23,6 @@ hr {
     }
 
     &.no-line {
-        border: 1px solid transparent;
+        background-color: transparent;
     }
 }

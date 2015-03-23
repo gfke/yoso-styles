@@ -1,3 +1,11 @@
+//
+// Preformatted Text
+//
+// <pre></pre>
+//
+
+
 pre {
-    background-color: $code--background-color;
+    background-color: $pre--background-color;
+    color: $pre--font-color;
 }

@@ -1,4 +1,8 @@
-// Global viewport settingg
+//
+// Viewport
+//
+
+
 .viewport {
 
     &--center {
@@ -9,6 +13,7 @@
         align-content: stretch;
         align-items: center;
         overflow: hidden;
+        box-sizing: border-box;
     }
 
     &--row {
@@ -19,6 +24,7 @@
         align-content: stretch;
         align-items: stretch;
         overflow: hidden;
+        box-sizing: border-box;
 
         &-center {
             display: flex;
@@ -28,6 +34,7 @@
             align-content: stretch;
             align-items: center;
             overflow: hidden;
+            box-sizing: border-box;
         }
     }
 
@@ -39,6 +46,7 @@
         align-content: stretch;
         align-items: stretch;
         overflow: hidden;
+        box-sizing: border-box;
 
         &-center {
             display: flex;
@@ -48,30 +56,35 @@
             align-content: stretch;
             align-items: center;
             overflow: hidden;
+            box-sizing: border-box;
         }
     }
 
     &--fullsize {
         width: 100vw;
         height: 100vh;
+        box-sizing: border-box;
     }
 
     &__item--flex-min {
         flex: 0.00001 0 auto;
         align-self: auto;
         overflow-y: auto;
+        box-sizing: border-box;
     }
 
     &__item--flex {
         flex: 1 1 auto;
         align-self: auto;
         overflow-y: auto;
+        box-sizing: border-box;
     }
 
     &__item {
         flex: 0 0 auto;
         align-self: auto;
         overflow-y: auto;
+        box-sizing: border-box;
     }
 
 

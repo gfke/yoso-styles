@@ -7,7 +7,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  color: black;
+  color: #505050;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -32,31 +32,32 @@ p {
 code {
   font-family: "Courier New", monospace;
   padding: 0.125rem 0.25rem;
-  font-size: 0.9rem;
-  color: #2892dd;
-  background-color: #f0f0f0;
+  font-size: 1rem;
+  color: #c62b2c;
+  background-color: #f4f4f4;
   border-radius: 0.25rem; }
 
 pre {
-  background-color: #f0f0f0; }
+  background-color: #f4f4f4;
+  color: #505050; }
 
-a {
+a, [ng-click] {
   color: #4484cc;
   text-decoration: none;
   outline: none; }
-  a:link {
+  a:link, [ng-click]:link {
     color: #4484cc;
     outline: none; }
-  a:hover {
+  a:hover, [ng-click]:hover {
     color: #4484cc;
     outline: none; }
-  a:active {
+  a:active, [ng-click]:active {
     color: #4484cc;
     outline: none; }
-  a:visited {
+  a:visited, [ng-click]:visited {
     color: #4484cc;
     outline: none; }
-  a:focus {
+  a:focus, [ng-click]:focus {
     color: #4484cc;
     outline: none; }
 
@@ -86,17 +87,60 @@ h5, .h5 {
 h6, .h6 {
   font-size: 0.75rem; }
 
-hr.space-1, hr.space {
-  margin: 1rem 0; }
-hr.space-2 {
-  margin: 2rem 0; }
-hr.space-3 {
-  margin: 3rem 0; }
-hr.no-line {
-  border: 1px solid transparent; }
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #e1e1e1; }
+  hr.space-1, hr.space {
+    margin: 1rem 0; }
+  hr.space-2 {
+    margin: 2rem 0; }
+  hr.space-3 {
+    margin: 3rem 0; }
+  hr.no-line {
+    background-color: transparent; }
 
 img {
   vertical-align: middle; }
+
+ul, ol, li, dl, dt, dd {
+  box-sizing: border-box; }
+
+dl dt {
+  font-weight: bold;
+  line-height: 1.45em;
+  box-sizing: border-box; }
+dl dd {
+  margin-left: 0;
+  line-height: 1.45em;
+  box-sizing: border-box; }
+
+strong {
+  color: black;
+  font-weight: 700; }
+
+table {
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse; }
+  table col[class*="col-"] {
+    position: static;
+    float: none;
+    display: table-column; }
+  table td[class*="col-"], table th[class*="col-"] {
+    position: static;
+    float: none;
+    display: table-cell; }
+
+caption {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #505050;
+  text-align: left; }
+
+th {
+  text-align: left;
+  font-weight: 700; }
 
 body .no-js {
   display: none; }
@@ -146,7 +190,8 @@ html {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  overflow: hidden; }
+  overflow: hidden;
+  box-sizing: border-box; }
 .viewport--row {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -166,7 +211,8 @@ html {
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  overflow: hidden; }
+  overflow: hidden;
+  box-sizing: border-box; }
   .viewport--row-center {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -186,7 +232,8 @@ html {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    overflow: hidden; }
+    overflow: hidden;
+    box-sizing: border-box; }
 .viewport--column {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -206,7 +253,8 @@ html {
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  overflow: hidden; }
+  overflow: hidden;
+  box-sizing: border-box; }
   .viewport--column-center {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -226,10 +274,12 @@ html {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    overflow: hidden; }
+    overflow: hidden;
+    box-sizing: border-box; }
 .viewport--fullsize {
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  box-sizing: border-box; }
 .viewport__item--flex-min {
   -webkit-flex: 0.00001 0 auto;
   -ms-flex: 0.00001 0 auto;
@@ -237,7 +287,8 @@ html {
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  overflow-y: auto; }
+  overflow-y: auto;
+  box-sizing: border-box; }
 .viewport__item--flex {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -245,7 +296,8 @@ html {
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  overflow-y: auto; }
+  overflow-y: auto;
+  box-sizing: border-box; }
 .viewport__item {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -253,13 +305,27 @@ html {
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  overflow-y: auto; }
+  overflow-y: auto;
+  box-sizing: border-box; }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
   display: block;
   font-size: 0.8em;
-  font-weight: 300;
-  color: #c8c8c8; }
+  font-weight: 100;
+  color: #787878; }
+h1 abbr, h2 abbr, h3 abbr, h4 abbr, h5 abbr, h6 abbr, .h1 abbr, .h2 abbr, .h3 abbr, .h4 abbr, .h5 abbr, .h6 abbr {
+  display: inline-block;
+  font-size: 0.6em;
+  color: #787878;
+  font-weight: 100; }
+h1.capital, h2.capital, h3.capital, h4.capital, h5.capital, h6.capital, .h1.capital, .h2.capital, .h3.capital, .h4.capital, .h5.capital, .h6.capital {
+  text-align: center;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em; }
+  h1.capital small, h2.capital small, h3.capital small, h4.capital small, h5.capital small, h6.capital small, .h1.capital small, .h2.capital small, .h3.capital small, .h4.capital small, .h5.capital small, .h6.capital small {
+    color: black;
+    margin-top: 0.5em; }
 
 /*
  * Yoso Fieldset
@@ -335,28 +401,28 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
       .yoso-fieldset .post-field .state-icons svg path {
         fill: #e5e5e5; }
     .yoso-fieldset .post-field .state-icons.info svg path {
-      fill: #2892dd; }
+      fill: #d8edf8; }
     .yoso-fieldset .post-field .state-icons.success svg path {
-      fill: #59ba47; }
+      fill: #dff0d7; }
     .yoso-fieldset .post-field .state-icons.warning svg path {
-      fill: #e29b31; }
+      fill: #fcf8e2; }
     .yoso-fieldset .post-field .state-icons.error svg path {
-      fill: #c62b2c; }
+      fill: #f2dede; }
   .yoso-fieldset.line {
     border-bottom: 1px solid #e5e5e5;
     margin-bottom: 0.5em; }
 
 .yoso-fieldhint {
   text-align: right;
-  color: #f0f0f0; }
+  color: #f4f4f4; }
   .yoso-fieldhint.error {
-    color: #c62b2c; }
+    color: #f2dede; }
   .yoso-fieldhint.success {
-    color: #59ba47; }
+    color: #dff0d7; }
   .yoso-fieldhint.info {
-    color: #2892dd; }
+    color: #d8edf8; }
   .yoso-fieldhint.warning {
-    color: #e29b31; }
+    color: #fcf8e2; }
 
 .yoso-button {
   display: inline-block;
@@ -404,12 +470,142 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
   padding: 1rem 0; }
 .content--pad-horizontal {
   padding: 0 1rem; }
-.content--middle {
+.content--max-size {
   max-width: 62rem; }
-.content--middle-center {
+.content--center {
   max-width: 62rem;
   margin-left: auto;
   margin-right: auto; }
+
+.dl--horizontal dt {
+  float: left;
+  width: 10rem;
+  overflow: hidden;
+  clear: left;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+.dl--horizontal dd {
+  margin-left: 12rem; }
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 1rem 0;
+  font-size: 1rem; }
+  .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+    padding: 0.5rem;
+    line-height: 1.45;
+    vertical-align: top;
+    border-top: 1px solid #e1e1e1; }
+  .table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #e1e1e1; }
+  .table > caption + thead > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > th, .table > thead:first-child > tr:first-child > td {
+    border-top: 0; }
+  .table > tbody + tbody {
+    border-top: 2px solid #e1e1e1; }
+  .table .table {
+    background-color: white; }
+
+.table-bordered {
+  border: 1px solid #e1e1e1; }
+  .table-bordered > thead > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > tfoot > tr > td {
+    border: 1px solid #e1e1e1; }
+  .table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+    border-bottom-width: 2px; }
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #e1e1e1; }
+
+.table-hover > tbody > tr:hover {
+  background-color: #d8edf8; }
+
+.table tr.active, .table td.active, .table th.active {
+  background-color: #f4f4f4; }
+.table tr.success, .table td.success, .table th.success {
+  background-color: #dff0d7; }
+.table tr.info, .table td.info, .table th.info {
+  background-color: #d8edf8; }
+.table tr.warning, .table td.warning, .table th.warning {
+  background-color: #fcf8e2; }
+.table tr.danger, .table td.danger, .table th.danger {
+  background-color: #f2dede; }
+
+/*
+// Responsive tables
+//
+// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+.table-responsive {
+    overflow-x: auto;
+    min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+
+    @media screen and (max-width: $screen-xs-max) {
+        width: 100%;
+        margin-bottom: ($line-height-computed * 0.75);
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid $table-border-color;
+
+        // Tighten up spacing
+        > .table {
+            margin-bottom: 0;
+
+            // Ensure the content doesn't wrap
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th,
+                    > td {
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+
+        // Special overrides for the bordered tables
+        > .table-bordered {
+            border: 0;
+
+            // Nuke the appropriate borders so that the parent can handle them
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th:first-child,
+                    > td:first-child {
+                        border-left: 0;
+                    }
+                    > th:last-child,
+                    > td:last-child {
+                        border-right: 0;
+                    }
+                }
+            }
+
+            // Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+            // chances are there will be only one `tr` in a `thead` and that would
+            // remove the border altogether.
+            > tbody,
+            > tfoot {
+                > tr:last-child {
+                    > th,
+                    > td {
+                        border-bottom: 0;
+                    }
+                }
+            }
+
+        }
+    }
+}
+*/
+[ng-click] {
+  cursor: pointer; }
 
 .spinner-wrapper {
   position: fixed;
