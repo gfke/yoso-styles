@@ -3,10 +3,6 @@ main pre {
         border: 0;
         overflow: hidden;
         padding: 0 1rem;
-
-        code {
-            font-size: .7rem;
-        }
     }
 }
 
@@ -19,11 +15,6 @@ main pre {
 .example {
     border: 1px solid rgb(240, 240, 240);
 }
-
-pre {
-    margin-top: 0;
-}
-
 
 #viewport {
     .example {

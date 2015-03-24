@@ -22,7 +22,7 @@
             <div class="message">Please enable JavaScript for our Application.</div>
         </div>
 
-        <main>
+        <main id="main">
             <div class="viewport--row viewport--fullsize">
                 <div class="navigation viewport__item">
                     <header ng-click="loadContent('main.html')">header</header>
@@ -35,17 +35,21 @@
                             <a>Styles</a>
                             <ul>
                                 <li ng-click="loadContent('viewport')">Viewport</li>
-                                <li ng-click="loadContent('headlines')">Headlines</li>
                                 <li ng-click="loadContent('links')">Links</li>
-                                <li ng-click="loadContent('helpers')">Helpers</li>
+                                <li ng-click="loadContent('Code')">Code</li>
+                                <li ng-click="loadContent('typography')">Typography</li>
+                                <li ng-click="loadContent('headlines')">Headlines</li>
                                 <li ng-click="loadContent('lists')">Lists</li>
                                 <li ng-click="loadContent('tables')">Tables</li>
+                                <li ng-click="loadContent('forms')">Forms</li>
+                                <li ng-click="loadContent('buttons')">Buttons</li>
+                                <li ng-click="loadContent('helpers')">Helpers</li>
                             </ul>
                         </li>
                     </ul>
                 </div>
                 <div class="viewport__item--flex">
-                    <header>header</header>
+                    <header id="top">header</header>
 
                     <div ng-include="content" class="content--center"></div>
                 </div>

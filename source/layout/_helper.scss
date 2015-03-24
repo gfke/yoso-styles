@@ -3,7 +3,9 @@
 //
 
 
+//
 // visibility
+//
 .invisible {
     visibility: hidden;
 }
@@ -12,20 +14,10 @@
     display: none;
 }
 
-// alignments
-.align-center {
-    text-align: center;
-}
 
-.align-left {
-    text-align: left;
-}
-
-.align-right {
-    text-align: right;
-}
-
+//
 // floating
+//
 .float-left {
     float: left;
 }

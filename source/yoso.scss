@@ -1,4 +1,5 @@
 @import 'config';
+@import 'normalize';
 
 // Mixins
 @import 'mixins/clearfix';
@@ -14,8 +15,12 @@
 @import 'foundation/paragraph';
 @import 'foundation/code';
 @import 'foundation/pre';
+@import 'foundation/kbd';
+@import 'foundation/var';
+@import 'foundation/samp';
 @import 'foundation/link';
 @import 'foundation/headline';
+@import 'foundation/blockquote';
 @import 'foundation/hr';
 @import 'foundation/image';
 @import 'foundation/lists';
@@ -29,6 +34,8 @@
 @import 'layout/viewport';
 @import 'layout/headline';
 @import 'layout/fieldset';
+@import 'layout/typography';
+@import 'layout/blockquote';
 @import 'layout/helper';
 @import 'layout/lists';
 @import 'layout/block';

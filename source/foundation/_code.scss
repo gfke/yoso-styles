@@ -6,10 +6,10 @@
 
 
 code {
-    font-family: $code--font-family;
-    padding: 0.125rem 0.25rem;
-    font-size: 1rem;
+    font-family: $font-family--monospaced;
+    padding: $code--padding;
+    font-size: $code--font-size;
     color: $code--color;
     background-color: $code--background-color;
-    border-radius: 0.25rem;
+    border-radius: $default-border-radius;
 }

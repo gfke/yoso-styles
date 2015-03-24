@@ -3,15 +3,15 @@ var ngModel = angular.module('DocsApp', [])
         //
     });
 
-ngModel.controller('DocsCtrl', function($scope, $timeout, $anchorScroll, $location) {
+ngModel.controller('DocsCtrl', function($scope, $timeout, $anchorScroll, $location, $window) {
     $scope.content = 'main.html';
 
     $scope.loadContent = function(template) {
+        $scope.scrollTo('top');
         $scope.content = template + '.html';
-        $timeout(function(){
+        $timeout(function() {
             PR.prettyPrint();
         }, 100);
-
     };
 
     $scope.scrollTo = function(anchor) {

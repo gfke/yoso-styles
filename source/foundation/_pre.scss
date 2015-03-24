@@ -6,6 +6,24 @@
 
 
 pre {
+    display: block;
     background-color: $pre--background-color;
+    font-family: $font-family--monospaced;
+    font-size: $pre--font-size;
     color: $pre--font-color;
+    line-height: $pre--line-height;
+    word-break: break-all;
+    word-wrap: break-word;
+    padding: $pre--padding;
+    margin: $pre--margin;
+
+    // Account for some code outputs that place code tags in pre tags
+    code {
+        padding: 0;
+        font-size: inherit;
+        color: inherit;
+        white-space: pre-wrap;
+        background-color: transparent;
+        border-radius: 0;
+    }
 }

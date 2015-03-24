@@ -2,11 +2,13 @@
 
 // Globals
 $font-family--default:          Helvetica, Arial, sans-serif;
-$font-family--monochrome:       "Courier New", monospace;
+$font-family--monospaced:       "Courier New", monospace;
 $font-family--headline:         $font-family--default;
 
 $default-padding:               1rem;
 $default-margin:                1rem;
+$default-border-radius:         3px;
+$default-line-height:           1.45;
 
 // Document responsive screen size rules
 $resolution--mini:               480px;
@@ -57,10 +59,22 @@ $h-abbr--font-weight:           100;
 $h-abbr--size:                  .6em;
 $h-abbr--font-color:            $color-grey-middle;
 
+// paragraph
+$p--line-height:                $default-line-height;
+$p--margin:                     $default-margin 0;
+$p--padding:                    0;
+
+
 // Strong
 $strong--font-color:            $color-black;
 $strong--font-weight:           700;
 
+$blockquote--padding:           $default-padding;
+$blockquote--margin:            0 0 $default-margin;
+$blockquote--font-size:         1.4em;
+$blockquote---border-color:     $color-grey-light;
+$blockquote__small--font-size:  .8em;
+$blockquote__small--font-color: $color-grey-middle;
 
 // Link
 $a--link:                       rgb(68, 132, 204);
@@ -70,9 +84,14 @@ $a--visited:                    $a--link;
 
 
 // code
-$code--font-family:             $font-family--monochrome;
+$code--font-size:               .9em;
 $code--background-color:        $color-grey-bright;
 $code--color:                   $color-red-dark;
+$code--padding:                 .125rem .25rem;
+
+// kbd
+$kbd--font-color:               $color-white;
+$kbd--background-color:         $color-grey-dark;
 
 // hr
 $hr--color:                     $color-grey-light;
@@ -81,24 +100,24 @@ $hr--line-width:                1px;
 // pre
 $pre--background-color:         $color-grey-bright;
 $pre--font-color:               $body--font-color;
+$pre--font-size:                1rem;
+$pre--line-height:              $default-line-height;
+$pre--margin:                   0 0 $default-margin;
+$pre--padding:                  $default-padding;
 
 // table
 $table--background-color:       transparent;
 $table--margin:                 0 0 $default-margin 0;
 $table--border-color:           $color-grey-light;
-$table--line-height:            1.45;
+$table--line-height:            $default-line-height;
 $table--font-size:              1rem;
-
 $table-row--hover-color:        $color-blue-bright;
-
 $table-cell--stripe-color:      $color-grey-light;
 $table-cell--padding:           .5rem;
-
 $table-caption--font-color:     $color-grey-dark;
 $table-caption--alignment:      left;
-
 $table-head--alignment:         left;
 $table-head--font-weight:       700;
 
-    // Helpers
+// Helpers
 $content--max-width:            62rem;

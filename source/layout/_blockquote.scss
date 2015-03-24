@@ -1,0 +1,40 @@
+//
+// Blockquote
+//
+
+blockquote {
+    &.active {
+        border-color: $color-state--active;
+    }
+
+    &.success {
+        border-color: $color-state--success;
+    }
+
+    &.info {
+        border-color: $color-state--info;
+    }
+
+    &.warning {
+        border-color: $color-state--warning;
+    }
+
+    &.danger {
+        border-color: $color-state--danger;
+    }
+
+    p,
+    ul,
+    ol {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    footer {
+        display: block;
+        font-size: $blockquote__small--font-size;
+        line-height: $default-line-height;
+        color: $blockquote__small--font-color;
+    }
+}

@@ -7,25 +7,26 @@ ul, ol, li, dl, dt, dd {
     box-sizing: border-box;
 }
 
+ul, ol {
+    margin-top: 0;
+    margin-bottom: $default-margin;
+    ul, ol {
+        margin-bottom: 0;
+    }
+}
+
 dl {
+
+    dd, dt {
+        line-height: 1.45em;
+        box-sizing: border-box;
+    }
 
     dt {
         font-weight: bold;
-        line-height: 1.45em;
-        box-sizing: border-box;
     }
 
     dd {
         margin-left: 0;
-        line-height: 1.45em;
-        box-sizing: border-box;
     }
-}
-
-ol {
-
-}
-
-ul {
-
 }
