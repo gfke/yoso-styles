@@ -1,0 +1,46 @@
+//
+// Block
+//
+
+.block {
+    overflow: hidden;
+    box-sizing: border-box;
+
+    &--responsive {
+        overflow-x: auto;
+        box-sizing: border-box;
+
+        // Small resolution (between 481 and 768) (75.00%)
+        @media
+            // small screen, on retina 3x (iPhone 6plus), stuff to override above media query
+        only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: $resolution--small),
+        only screen and (min--moz-device-pixel-ratio: 3) and (max-width: $resolution--small),
+        only screen and (-o-min-device-pixel-ratio: 3/1) and (max-width: $resolution--small),
+        only screen and (min-device-pixel-ratio: 3) and (max-width: $resolution--small),
+        only screen and (min-resolution: 401dpi) and (max-width: $resolution--small),
+        only screen and (min-resolution: 2dppx) and (max-width: $resolution--small),
+            // small screens on 96-109ppi, non retina
+        only screen and (max-width: $resolution--small) {
+            width: 100%;
+            overflow-y: hidden;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+
+            // Tighten up spacing
+            > .table {
+                margin-bottom: 0;
+
+                // Ensure the content doesn't wrap
+                > thead,
+                > tbody,
+                > tfoot {
+                    > tr {
+                        > th,
+                        > td {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -8,7 +8,7 @@
         It may seem super redundant, but given the widespread use of tables for other plugins like calendars and
         date pickers, we've opted to isolate our custom table styles.
     </p>
-    <div class="example content--pad">
+    <div class="example block content--pad">
         <table class="table">
             <thead>
                 <tr>
@@ -59,8 +59,8 @@
     <p>
         Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>tbody</code>.
     </p>
-    <div class="example content--pad">
-        <table class="table table-striped">
+    <div class="example block content--pad">
+        <table class="table table--striped">
             <thead>
             <tr>
                 <th>ID</th>
@@ -98,7 +98,7 @@
     </div>
     <pre class="lang-css prettyprint content--pad">
         <code>
-&lt;table class="table table-striped"&gt;
+&lt;table class="table table--striped"&gt;
     ...
 &lt;/table&gt;
         </code>
@@ -110,8 +110,8 @@
     <p>
         Add <code>.table-bordered</code> for borders on all sides of the table and cells.
     </p>
-    <div class="example content--pad">
-        <table class="table table-bordered">
+    <div class="example block content--pad">
+        <table class="table table--bordered">
             <thead>
             <tr>
                 <th>ID</th>
@@ -149,9 +149,9 @@
     </div>
     <pre class="lang-css prettyprint content--pad">
         <code>
-            &lt;table class="table table-bordered"&gt;
-            ...
-            &lt;/table&gt;
+&lt;table class="table table--bordered"&gt;
+...
+&lt;/table&gt;
         </code>
     </pre>
 
@@ -161,8 +161,8 @@
     <p>
         Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.
     </p>
-    <div class="example content--pad">
-        <table class="table table-hover">
+    <div class="example block content--pad">
+        <table class="table table--hover">
             <thead>
             <tr>
                 <th>ID</th>
@@ -200,9 +200,9 @@
     </div>
     <pre class="lang-css prettyprint content--pad">
         <code>
-            &lt;table class="table table-hover"&gt;
-            ...
-            &lt;/table&gt;
+&lt;table class="table table--hover"&gt;
+...
+&lt;/table&gt;
         </code>
     </pre>
 
@@ -212,52 +212,55 @@
     <p>
         Use contextual classes to color table rows or individual cells.
     </p>
-    <table class="table">
-        <colgroup>
-            <col class="col-xs-1">
-            <col class="col-xs-7">
-        </colgroup>
-        <thead>
-        <tr>
-            <th>Class</th>
-            <th>Description</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>
-                <code>.active</code>
-            </td>
-            <td>Applies the hover color to a particular row or cell</td>
-        </tr>
-        <tr>
-            <td>
-                <code>.success</code>
-            </td>
-            <td>Indicates a successful or positive action</td>
-        </tr>
-        <tr>
-            <td>
-                <code>.info</code>
-            </td>
-            <td>Indicates a neutral informative change or action</td>
-        </tr>
-        <tr>
-            <td>
-                <code>.warning</code>
-            </td>
-            <td>Indicates a warning that might need attention</td>
-        </tr>
-        <tr>
-            <td>
-                <code>.danger</code>
-            </td>
-            <td>Indicates a dangerous or potentially negative action</td>
-        </tr>
-        </tbody>
-    </table>
 
-    <div class="example content--pad">
+    <div class="block">
+        <table class="table">
+            <colgroup>
+                <col class="col-xs-1">
+                <col class="col-xs-7">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>Class</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <code>.active</code>
+                </td>
+                <td>Applies the hover color to a particular row or cell</td>
+            </tr>
+            <tr>
+                <td>
+                    <code>.success</code>
+                </td>
+                <td>Indicates a successful or positive action</td>
+            </tr>
+            <tr>
+                <td>
+                    <code>.info</code>
+                </td>
+                <td>Indicates a neutral informative change or action</td>
+            </tr>
+            <tr>
+                <td>
+                    <code>.warning</code>
+                </td>
+                <td>Indicates a warning that might need attention</td>
+            </tr>
+            <tr>
+                <td>
+                    <code>.danger</code>
+                </td>
+                <td>Indicates a dangerous or potentially negative action</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="example block content--pad">
         <table class="table">
             <thead>
                 <tr>
@@ -333,4 +336,56 @@
     </pre>
 
 
+    <!-- scroll example -->
+    <hr class="space-3 no-line">
+    <h2>Responsive Scrolling</h2>
+    <p>
+        This example shows how to enable responsive scrolling on devices with lower resolution as 768px.
+    </p>
+    <div class="example content--pad block--responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-Mail</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>1</th>
+                <td>John</td>
+                <td>Nett</td>
+                <td>john.nett@gmail.com</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Robert</td>
+                <td>Welsh</td>
+                <td>rober.welsh@gmail.com</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Susan</td>
+                <td>Strong</td>
+                <td>susan.strong@icloud.com</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="4">Records: 3</th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+    <pre class="lang-css prettyprint content--pad">
+        <code>
+&lt;div class="block--responsive"&gt;
+    &lt;table class="table"&gt;
+    ...
+    &lt;/table&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
 </section>

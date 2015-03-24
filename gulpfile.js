@@ -67,7 +67,7 @@ gulp.task('watch', function () {
     };
 
     // Create gulp watcher for scss files
-    gulp.watch(['./source/**/*.scss','./doc_styles/**/*.scss'], ['sass']).on('change', logFunction);
+    gulp.watch(['./source/**/*','./doc_styles/**/*'], ['sass']).on('change', logFunction);
 
     // Create gulp watcher for docs files
     gulp.watch('./docs/**/*', ['http-refresh']).on('change', logFunction);

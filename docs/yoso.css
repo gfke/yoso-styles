@@ -119,6 +119,9 @@ strong {
   color: black;
   font-weight: 700; }
 
+div {
+  box-sizing: border-box; }
+
 table {
   background-color: transparent;
   border-spacing: 0;
@@ -488,6 +491,22 @@ h1.capital, h2.capital, h3.capital, h4.capital, h5.capital, h6.capital, .h1.capi
 .dl--horizontal dd {
   margin-left: 12rem; }
 
+.block {
+  overflow: hidden;
+  box-sizing: border-box; }
+  .block--responsive {
+    overflow-x: auto;
+    box-sizing: border-box; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: 768px), only screen and (min-device-pixel-ratio: 3) and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 4.177083333333333) and (max-width: 768px), only screen and (min-resolution: 401dpi) and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px), only screen and (min-resolution: 2dppx) and (max-width: 768px), only screen and (max-width: 768px) {
+      .block--responsive {
+        width: 100%;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar; }
+        .block--responsive > .table {
+          margin-bottom: 0; }
+          .block--responsive > .table > thead > tr > th, .block--responsive > .table > thead > tr > td, .block--responsive > .table > tbody > tr > th, .block--responsive > .table > tbody > tr > td, .block--responsive > .table > tfoot > tr > th, .block--responsive > .table > tfoot > tr > td {
+            white-space: nowrap; } }
+
 .table {
   width: 100%;
   max-width: 100%;
@@ -507,103 +526,28 @@ h1.capital, h2.capital, h3.capital, h4.capital, h5.capital, h6.capital, .h1.capi
     border-top: 2px solid #e1e1e1; }
   .table .table {
     background-color: white; }
+  .table tr.active, .table td.active, .table th.active {
+    background-color: #f4f4f4; }
+  .table tr.success, .table td.success, .table th.success {
+    background-color: #dff0d7; }
+  .table tr.info, .table td.info, .table th.info {
+    background-color: #d8edf8; }
+  .table tr.warning, .table td.warning, .table th.warning {
+    background-color: #fcf8e2; }
+  .table tr.danger, .table td.danger, .table th.danger {
+    background-color: #f2dede; }
 
-.table-bordered {
+.table--bordered {
   border: 1px solid #e1e1e1; }
-  .table-bordered > thead > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > tfoot > tr > td {
+  .table--bordered > thead > tr > th, .table--bordered > thead > tr > td, .table--bordered > tbody > tr > th, .table--bordered > tbody > tr > td, .table--bordered > tfoot > tr > th, .table--bordered > tfoot > tr > td {
     border: 1px solid #e1e1e1; }
-  .table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+  .table--bordered > thead > tr > th, .table--bordered > thead > tr > td {
     border-bottom-width: 2px; }
-
-.table-striped > tbody > tr:nth-of-type(odd) {
+.table--striped > tbody > tr:nth-of-type(odd) {
   background-color: #e1e1e1; }
-
-.table-hover > tbody > tr:hover {
+.table--hover > tbody > tr:hover {
   background-color: #d8edf8; }
 
-.table tr.active, .table td.active, .table th.active {
-  background-color: #f4f4f4; }
-.table tr.success, .table td.success, .table th.success {
-  background-color: #dff0d7; }
-.table tr.info, .table td.info, .table th.info {
-  background-color: #d8edf8; }
-.table tr.warning, .table td.warning, .table th.warning {
-  background-color: #fcf8e2; }
-.table tr.danger, .table td.danger, .table th.danger {
-  background-color: #f2dede; }
-
-/*
-// Responsive tables
-//
-// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
-// by enabling horizontal scrolling. Only applies <768px. Everything above that
-// will display normally.
-
-.table-responsive {
-    overflow-x: auto;
-    min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
-
-    @media screen and (max-width: $screen-xs-max) {
-        width: 100%;
-        margin-bottom: ($line-height-computed * 0.75);
-        overflow-y: hidden;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        border: 1px solid $table-border-color;
-
-        // Tighten up spacing
-        > .table {
-            margin-bottom: 0;
-
-            // Ensure the content doesn't wrap
-            > thead,
-            > tbody,
-            > tfoot {
-                > tr {
-                    > th,
-                    > td {
-                        white-space: nowrap;
-                    }
-                }
-            }
-        }
-
-        // Special overrides for the bordered tables
-        > .table-bordered {
-            border: 0;
-
-            // Nuke the appropriate borders so that the parent can handle them
-            > thead,
-            > tbody,
-            > tfoot {
-                > tr {
-                    > th:first-child,
-                    > td:first-child {
-                        border-left: 0;
-                    }
-                    > th:last-child,
-                    > td:last-child {
-                        border-right: 0;
-                    }
-                }
-            }
-
-            // Only nuke the last row's bottom-border in `tbody` and `tfoot` since
-            // chances are there will be only one `tr` in a `thead` and that would
-            // remove the border altogether.
-            > tbody,
-            > tfoot {
-                > tr:last-child {
-                    > th,
-                    > td {
-                        border-bottom: 0;
-                    }
-                }
-            }
-
-        }
-    }
-}
-*/
 [ng-click] {
   cursor: pointer; }
 
