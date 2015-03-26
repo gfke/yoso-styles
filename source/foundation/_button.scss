@@ -1,0 +1,27 @@
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block;
+    padding: $button--padding;
+    margin: $button--margin;
+    line-height: $button--line-height;
+    border: $button--border;
+    background-color: $button--background-color;
+    color: $button--font-color;
+    cursor: pointer;
+    @include user-select(none);
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:active {
+        background-color: lighten($button--background-color, 35%);
+    }
+
+    &:disabled {
+        opacity: .4;
+        cursor: not-allowed;
+    }
+}

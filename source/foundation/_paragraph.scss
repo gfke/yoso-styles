@@ -7,6 +7,8 @@
 p {
     box-sizing: border-box;
     line-height: $p--line-height;
+    font-size: $p--font-size;
     margin: $p--margin;
     padding: $p--padding;
+    @include user-select(text);
 }

@@ -5,6 +5,7 @@
 
 ul, ol, li, dl, dt, dd {
     box-sizing: border-box;
+    @include user-select(text);
 }
 
 ul, ol {

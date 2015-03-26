@@ -16,4 +16,5 @@ body {
     font-size: $body--font-size;
     font-weight: $body--font-weight;
     background-color: $body--background-color;
+    @include user-select(none);
 }

@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6,
     line-height: 1.1;
     margin: 1.25rem 0 0.625rem;
     padding: 0;
+    @include user-select(text);
 }
 
 h1, .h1 {

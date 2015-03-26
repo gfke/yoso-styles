@@ -6,4 +6,5 @@
 
 section {
     box-sizing: border-box;
+    @include user-select(none);
 }

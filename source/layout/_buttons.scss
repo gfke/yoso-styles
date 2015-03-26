@@ -1,0 +1,218 @@
+//
+// Button
+//
+
+//
+// define contextual button states
+@mixin button-contextual-states {
+    &.active {
+        border-color: darken($color-state--active, 30%);
+        color: darken($color-state--active, 30%);
+        background-color: $color-state--active;
+
+        svg path {
+            fill: darken($color-state--active, 30%);
+        }
+
+        &:active {
+            background-color: darken($color-state--active, 30%);
+            color: $color-state--active;
+
+            svg path {
+                fill: $color-state--active;
+            }
+        }
+    }
+
+    &.success {
+        border-color: darken($color-state--success, 30%);
+        color: darken($color-state--success, 30%);
+        background-color: $color-state--success;
+
+        svg path {
+            fill: darken($color-state--success, 30%);
+        }
+
+        &:active {
+            background-color: darken($color-state--success, 30%);
+            color: $color-state--success;
+
+            svg path {
+                fill: $color-state--success;
+            }
+        }
+    }
+
+    &.info {
+        border-color: darken($color-state--info, 30%);
+        color: darken($color-state--info, 30%);
+        background-color: $color-state--info;
+
+        svg path {
+            fill: darken($color-state--info, 30%);
+        }
+
+        &:active {
+            background-color: darken($color-state--info, 30%);
+            color: $color-state--info;
+
+            svg path {
+                fill: $color-state--info;
+            }
+        }
+    }
+
+    &.warning {
+        border-color: darken($color-state--warning, 30%);
+        color: darken($color-state--warning, 30%);
+        background-color: $color-state--warning;
+
+        svg path {
+            fill: darken($color-state--warning, 30%);
+        }
+
+        &:active {
+            background-color: darken($color-state--warning, 30%);
+            color: $color-state--warning;
+
+            svg path {
+                fill: $color-state--warning;
+            }
+        }
+    }
+
+    &.danger {
+        border-color: darken($color-state--danger, 30%);
+        color: darken($color-state--danger, 30%);
+        background-color: $color-state--danger;
+
+        svg path {
+            fill: darken($color-state--danger, 30%);
+        }
+
+        &:active {
+            background-color: darken($color-state--danger, 30%);
+            color: $color-state--danger;
+
+            svg path {
+                fill: $color-state--danger;
+            }
+        }
+    }
+}
+
+//
+// define default button behaviour
+//
+.button {
+    display: inline-block;
+    padding: $button--padding;
+    margin: $button--margin;
+    line-height: $button--line-height;
+    border: $button--border;
+    background-color: $button--background-color;
+    color: $button--font-color;
+    cursor: pointer;
+    text-align: center;
+    transition: border .4s, background-color .2s;
+    @include user-select(none);
+
+    &:focus, &:hover {
+        outline: 0;
+    }
+
+    &:focus {
+        // TODO: find good way to show focused state
+        //box-shadow:  inset 0 0 1px 1px rgba($button--font-color, .2);
+    }
+
+    &:not(.disabled):not(:disabled):hover {
+        // TODO: for later use, hover effect except disabled elements
+        //border-color: $button--font-color;
+    }
+
+    &:active {
+        background-color: lighten($button--background-color, 35%);
+    }
+
+    &:disabled, &.disabled {
+        opacity: .4;
+        cursor: not-allowed;
+    }
+
+    @include button-contextual-states;
+}
+
+//
+// override a tag default link definitions for button behaviour
+// and inject button definitions.
+//
+a.button {
+    color: $button--font-color;
+
+    // reset a tag hover definitions
+    &:hover {
+        color: $button--font-color;
+        text-decoration: none;
+    }
+
+    // reset default active state, a tag will still react to this acts
+    &.disabled:active {
+        background-color: $button--background-color;
+    }
+}
+
+a,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    &.button {
+        &--bordered {
+            @extend .button;
+            border: 1px solid rgba($button--font-color, .3);
+        }
+
+        &--light {
+            @extend .button;
+            background-color: transparent;
+            border: 1px solid rgba($button--font-color, .3);
+        }
+
+        &--rounded {
+            border-radius: $default-border-radius;
+        }
+
+        &--round {
+            border-radius: 9999em;
+        }
+
+        &--nowrap {
+            vertical-align: top;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &--circle {
+            position: relative;
+            width: $button-circle--size;
+            height: $button-circle--size;
+            border-radius: 100%;
+            vertical-align: top;
+            white-space: nowrap;
+
+            svg {
+                position: absolute;
+                box-sizing: border-box;
+                left: 23%;
+                top: 23%;
+                width: $button-circle--size/2;
+                height: $button-circle--size/2;
+            }
+        }
+    }
+}
+
+
+

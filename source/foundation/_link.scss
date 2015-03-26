@@ -18,6 +18,7 @@ a {
     &:hover {
         color: $a--hover;
         outline: none;
+        text-decoration: underline;
     }
 
     &:active {

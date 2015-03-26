@@ -6,6 +6,7 @@ table {
     background-color: $table--background-color;
     border-spacing: 0;
     border-collapse: collapse;
+    @include user-select(all);
 
     // Table cell sizing
     // Reset default table behavior

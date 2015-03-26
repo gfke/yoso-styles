@@ -8,7 +8,7 @@ $font-family--headline:         $font-family--default;
 $default-padding:               1rem;
 $default-margin:                1rem;
 $default-border-radius:         3px;
-$default-line-height:           1.45;
+$default-line-height:           1.45em;
 
 // Document responsive screen size rules
 $resolution--mini:               480px;
@@ -23,7 +23,7 @@ $color-black:                   rgb(0, 0, 0);
 $color-white:                   rgb(255, 255, 255);
 $color-grey-dark:               rgb(80, 80, 80);
 $color-grey-middle:             rgb(120, 120, 120);
-$color-grey-light:              rgb(225, 225, 225);
+$color-grey-light:              rgb(229, 229, 229);
 $color-grey-bright:             rgb(244, 244, 244);
 $color-red-dark:                rgb(198, 43, 44);
 $color-blue-bright:             rgb(216, 237, 248);
@@ -43,13 +43,13 @@ $color-state--danger:           $color-red-bright;
 // Body variables
 $body--font-family:             $font-family--headline;
 $body--font-weight:             300;
-$body--font-color:              $color-grey-dark;
+$body--font-color:              rgba($color-black, .8);
 $body--font-size:               1rem;
 $body--background-color:        $color-white;
 
 // Headline
 $h--font-family:                $font-family--default;
-$h--font-weight:                500;
+$h--font-weight:                700;
 $h--font-color:                 $color-black;
 $h--border:                     1px solid $color-grey-light;
 $h-small--font-weight:          100;
@@ -60,7 +60,8 @@ $h-abbr--size:                  .6em;
 $h-abbr--font-color:            $color-grey-middle;
 
 // paragraph
-$p--line-height:                $default-line-height;
+$p--line-height:                2.0625rem;
+$p--font-size:                  1.375rem;
 $p--margin:                     $default-margin 0;
 $p--padding:                    0;
 
@@ -73,8 +74,8 @@ $blockquote--padding:           $default-padding;
 $blockquote--margin:            0 0 $default-margin;
 $blockquote--font-size:         1.4em;
 $blockquote---border-color:     $color-grey-light;
-$blockquote__small--font-size:  .8em;
-$blockquote__small--font-color: $color-grey-middle;
+$blockquote-small--font-size:   .8em;
+$blockquote-small--font-color:  $color-grey-middle;
 
 // Link
 $a--link:                       rgb(68, 132, 204);
@@ -118,6 +119,16 @@ $table-caption--font-color:     $color-grey-dark;
 $table-caption--alignment:      left;
 $table-head--alignment:         left;
 $table-head--font-weight:       700;
+
+// button
+$button--background-color:      rgba($color-black, .2);
+$button--font-color:            rgba($color-black, .8);
+$button--font-size:             1rem;
+$button--line-height:           $default-line-height;
+$button--padding:               .4rem .8rem;
+$button--margin:                .3rem;
+$button--border:                1px solid transparent;
+$button-circle--size:           2.4rem;
 
 // Helpers
 $content--max-width:            62rem;

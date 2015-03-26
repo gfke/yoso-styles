@@ -16,6 +16,7 @@ pre {
     word-wrap: break-word;
     padding: $pre--padding;
     margin: $pre--margin;
+    @include user-select(text);
 
     // Account for some code outputs that place code tags in pre tags
     code {
