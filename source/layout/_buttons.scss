@@ -117,18 +117,14 @@
     transition: border .4s, background-color .2s;
     @include user-select(none);
 
-    &:focus, &:hover {
-        outline: 0;
-    }
-
     &:focus {
         // TODO: find good way to show focused state
-        //box-shadow:  inset 0 0 1px 1px rgba($button--font-color, .2);
+        //box-shadow:  inset 0 0 3px 2px rgba($button--font-color, .2);
     }
 
     &:not(.disabled):not(:disabled):hover {
         // TODO: for later use, hover effect except disabled elements
-        //border-color: $button--font-color;
+        border-color: $button--font-color;
     }
 
     &:active {

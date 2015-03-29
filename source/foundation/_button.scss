@@ -12,10 +12,6 @@ input[type="reset"] {
     cursor: pointer;
     @include user-select(none);
 
-    &:focus {
-        outline: 0;
-    }
-
     &:active {
         background-color: lighten($button--background-color, 35%);
     }

@@ -35,6 +35,7 @@ input, button {
     &:required,
     &:optional,
     &:hover {
+        outline: 0;
         -webkit-appearance: none;
         -moz-appearance: none;
         -moz-box-shadow: none;

@@ -389,6 +389,30 @@ th {
   text-align: left;
   font-weight: 700; }
 
+form {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+fieldset {
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  margin: 0rem 0rem 0.6875rem 0rem; }
+
+textarea[contenteditable] {
+  -webkit-appearance: none; }
+
+input:focus, input:invalid, input:required, input:optional, input:hover, button:focus, button:invalid, button:required, button:optional, button:hover {
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: none;
+  outline-color: transparent;
+  outline-style: none; }
+
 button, input[type="button"], input[type="submit"], input[type="reset"] {
   display: inline-block;
   padding: .4rem .8rem;
@@ -404,8 +428,6 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  button:focus, input[type="button"]:focus, input[type="submit"]:focus, input[type="reset"]:focus {
-    outline: 0; }
   button:active, input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active {
     background-color: rgba(89, 89, 89, 0.2); }
   button:disabled, input[type="button"]:disabled, input[type="submit"]:disabled, input[type="reset"]:disabled {
@@ -887,8 +909,8 @@ blockquote footer {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .button:focus, a.button--bordered:focus, .button--bordered[ng-click]:focus, button.button--bordered:focus, input[type="button"].button--bordered:focus, input[type="submit"].button--bordered:focus, input[type="reset"].button--bordered:focus, a.button--light:focus, .button--light[ng-click]:focus, button.button--light:focus, input[type="button"].button--light:focus, input[type="submit"].button--light:focus, input[type="reset"].button--light:focus, .button:hover, a.button--bordered:hover, .button--bordered[ng-click]:hover, button.button--bordered:hover, input[type="button"].button--bordered:hover, input[type="submit"].button--bordered:hover, input[type="reset"].button--bordered:hover, a.button--light:hover, .button--light[ng-click]:hover, button.button--light:hover, input[type="button"].button--light:hover, input[type="submit"].button--light:hover, input[type="reset"].button--light:hover {
-    outline: 0; }
+  .button:not(.disabled):not(:disabled):hover, a.button--bordered:not(.disabled):not(:disabled):hover, .button--bordered[ng-click]:not(.disabled):not(:disabled):hover, button.button--bordered:not(.disabled):not(:disabled):hover, input[type="button"].button--bordered:not(.disabled):not(:disabled):hover, input[type="submit"].button--bordered:not(.disabled):not(:disabled):hover, input[type="reset"].button--bordered:not(.disabled):not(:disabled):hover, a.button--light:not(.disabled):not(:disabled):hover, .button--light[ng-click]:not(.disabled):not(:disabled):hover, button.button--light:not(.disabled):not(:disabled):hover, input[type="button"].button--light:not(.disabled):not(:disabled):hover, input[type="submit"].button--light:not(.disabled):not(:disabled):hover, input[type="reset"].button--light:not(.disabled):not(:disabled):hover {
+    border-color: rgba(0, 0, 0, 0.8); }
   .button:active, a.button--bordered:active, .button--bordered[ng-click]:active, button.button--bordered:active, input[type="button"].button--bordered:active, input[type="submit"].button--bordered:active, input[type="reset"].button--bordered:active, a.button--light:active, .button--light[ng-click]:active, button.button--light:active, input[type="button"].button--light:active, input[type="submit"].button--light:active, input[type="reset"].button--light:active {
     background-color: rgba(89, 89, 89, 0.2); }
   .button:disabled, a.button--bordered:disabled, .button--bordered[ng-click]:disabled, button.button--bordered:disabled, input[type="button"].button--bordered:disabled, input[type="submit"].button--bordered:disabled, input[type="reset"].button--bordered:disabled, a.button--light:disabled, .button--light[ng-click]:disabled, button.button--light:disabled, input[type="button"].button--light:disabled, input[type="submit"].button--light:disabled, input[type="reset"].button--light:disabled, .button.disabled, a.disabled.button--bordered, .disabled.button--bordered[ng-click], button.disabled.button--bordered, input.disabled[type="button"].button--bordered, input.disabled[type="submit"].button--bordered, input.disabled[type="reset"].button--bordered, a.disabled.button--light, .disabled.button--light[ng-click], button.disabled.button--light, input.disabled[type="button"].button--light, input.disabled[type="submit"].button--light, input.disabled[type="reset"].button--light {
@@ -986,6 +1008,131 @@ a.button--circle, .button--circle[ng-click], button.button--circle, input[type="
     top: 23%;
     width: 1.2rem;
     height: 1.2rem; }
+
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 1em;
+  max-width: 400px;
+  width: calc(100% - 2em);
+  vertical-align: top; }
+
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #aaa;
+  font-weight: 400;
+  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */ }
+
+.input__field:focus {
+  outline: none; }
+
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #6a7989;
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%; }
+
+.graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none; }
+
+.icon {
+  color: #ddd;
+  font-size: 150%; }
+
+/* Manami */
+.input--manami {
+  overflow: hidden; }
+
+.input__field--manami {
+  width: 100%;
+  background: transparent;
+  padding: 0.5em;
+  margin-bottom: 2em;
+  color: #f48fb1;
+  z-index: 100;
+  opacity: 0; }
+
+.input__label--manami {
+  width: 100%;
+  position: absolute;
+  text-align: left;
+  padding: 0.5em 0;
+  pointer-events: none;
+  font-size: 1em; }
+
+.input__label--manami::before, .input__label--manami::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0; }
+
+.input__label--manami::before {
+  height: 100%;
+  background: #fff;
+  top: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s; }
+
+.input__label--manami::after {
+  height: 2px;
+  background: #6a7989;
+  top: 100%;
+  transition: opacity 0.3s; }
+
+.input__label-content--manami {
+  padding: 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  transition: -webkit-transform 0.3s, color 0.3s;
+  transition: transform 0.3s, color 0.3s; }
+
+.input__field--manami:focus, .input--filled .input__field--manami {
+  opacity: 1;
+  transition: opacity 0s 0.3s; }
+
+.input__field--manami:focus + .input__label--manami::before, .input--filled .input__label--manami::before {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.input__field--manami:focus + .input__label--manami::after, .input--filled .input__label--manami::after {
+  opacity: 0; }
+
+.input__field--manami:focus + .input__label--manami .input__label-content--manami, .input--filled .input__label--manami .input__label-content--manami {
+  color: #cbc4c6;
+  -webkit-transform: translate3d(0, 2.1em, 0) scale3d(0.65, 0.65, 1);
+  transform: translate3d(0, 2.1em, 0) scale3d(0.65, 0.65, 1); }
 
 [ng-click] {
   cursor: pointer; }
