@@ -5,7 +5,7 @@ var gulp         = require('gulp'),
     scssLint     = require('gulp-scss-lint'),
     rename       = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
-    minifycss    = require('gulp-minify-css')
+    minifycss    = require('gulp-minify-css'),
     connect      = require('gulp-connect'),
     gutil        = require('gulp-util'),
     open         = require('gulp-open');
@@ -33,8 +33,11 @@ gulp.task('clear', function () {
 
 
 // TASK: sass
-gulp.task('sass', function () {
-    return gulp.src(['./source/*.scss', './doc_styles/*.scss'])
+gulp.task('sass', ['sass-yoso','sass-docs']);
+
+// TASK: sass-docs
+gulp.task('sass-docs', function () {
+    return gulp.src(['./doc_styles/*.scss','./source/*.scss'])
         .pipe(scssLint({
             'config': './lint.yml'
         }))
@@ -50,10 +53,30 @@ gulp.task('sass', function () {
             dirname: '',
             extname: '.css'
         }))
-        .pipe(gulp.dest('./docs'))
+        .pipe(gulp.dest('./docs'));
+});
+// TASK: sass-yoso
+gulp.task('sass-yoso', function () {
+    return gulp.src(['./source/*.scss'])
+        .pipe(scssLint({
+            'config': './lint.yml'
+        }))
+        .on('error', notifyErrors)
+        .pipe(sass({
+            sourceMap: true
+        }))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(rename({
+            dirname: '',
+            extname: '.css'
+        }))
+        .pipe(gulp.dest('./build'))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
-        .pipe(gulp.dest('./docs'));
+        .pipe(gulp.dest('./build'));
 });
 
 // TASK: http refresh
