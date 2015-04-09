@@ -6,6 +6,7 @@
 
 
 hr {
+    box-sizing: content-box;
     border: 0;
     height: $hr--line-width;
     background-color: $hr--color;

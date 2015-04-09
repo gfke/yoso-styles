@@ -12,8 +12,16 @@ $ npm install yoso-styles --save-dev
 ```
 
 ### Usage
+There are options to implement yoso-styles. First one is to inject is as it is, without customisation. In this case require the package in your application.
 ```javascript
     require('yoso-styles');
  ```
  
- Simply require the package in your application, the css files will be injected in your app.
+ The second option is to add it to your SASS style definitions. Here you can customize the yoso-style settings, overriding the variables.    
+ style.scss
+ ```scss
+     @import('yoso-styles/source/config');
+     // override the variables here
+     @import('yoso-styles/source/styles');
+  ```
+ 

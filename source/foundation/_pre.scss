@@ -3,7 +3,8 @@
 //
 // <pre></pre>
 //
-
+// Contain overflow in all browsers.
+//
 
 pre {
     display: block;
@@ -17,6 +18,7 @@ pre {
     padding: $pre--padding;
     margin: $pre--margin;
     @include user-select(text);
+    overflow: auto;
 
     // Account for some code outputs that place code tags in pre tags
     code {

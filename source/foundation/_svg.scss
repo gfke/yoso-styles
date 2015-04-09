@@ -1,0 +1,14 @@
+//
+// SVG
+//
+// <svg></svg>
+//
+// Correct overflow not hidden in IE 9/10/11.
+//
+
+svg {
+
+    svg:not(:root) {
+        overflow: hidden;
+    }
+}
