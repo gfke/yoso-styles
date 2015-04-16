@@ -1,8 +1,11 @@
 //
 // Angular
 //
-
-[ng-click] {
+// Set angular specific defaults.
+// Load angular directives
+//
+//
+[ng-click], [ui-sref] {
     @extend a;
     cursor: pointer;
 }
