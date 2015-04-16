@@ -84,6 +84,7 @@
     // Add borders all around the table and between all the columns.
     //
     &--bordered {
+        @extend .table;
         border: 1px solid $table--border-color;
         > thead,
         > tbody,
@@ -109,6 +110,7 @@
     // Default zebra-stripe styles (alternating gray and transparent backgrounds)
     //
     &--striped {
+        @extend .table;
         > tbody > tr:nth-of-type(odd) {
             background-color: $table-cell--stripe-color;
         }
@@ -120,6 +122,7 @@
     // Placed here since it has to come after the potential zebra striping
     //
     &--hover {
+        @extend .table;
         > tbody > tr:hover {
             background-color: $table-row--hover-color;
         }

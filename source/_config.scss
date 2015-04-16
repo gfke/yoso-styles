@@ -41,7 +41,7 @@ $color-state--danger:           $color-red-bright;
 
 
 // Body variables
-$body--font-family:             $font-family--headline;
+$body--font-family:             $font-family--default;
 $body--font-weight:             300;
 $body--font-color:              rgba($color-black, .8);
 $body--font-size:               1rem;
@@ -120,7 +120,7 @@ $table-caption--alignment:      left;
 $table-head--alignment:         left;
 $table-head--font-weight:       700;
 
-// button
+// Button
 $button--background-color:      rgba($color-black, .2);
 $button--font-color:            rgba($color-black, .8);
 $button--font-size:             1rem;
@@ -130,5 +130,9 @@ $button--margin:                .3rem;
 $button--border:                1px solid transparent;
 $button-circle--size:           2.4rem;
 
-// Helpers
+// Helper
 $content--max-width:            62rem;
+
+// Tabulator
+$tablulator--color:              rgb(130, 130, 130);
+$tablulator--border-color:       rgb(200, 200, 200);

@@ -708,39 +708,39 @@ blockquote footer {
         width: 100%;
         overflow-y: hidden;
         -ms-overflow-style: -ms-autohiding-scrollbar; }
-        .block--responsive > .table {
+        .block--responsive > .table, .block--responsive > .table--bordered, .block--responsive > .table--striped, .block--responsive > .table--hover {
           margin-bottom: 0; }
-          .block--responsive > .table > thead > tr > th, .block--responsive > .table > thead > tr > td, .block--responsive > .table > tbody > tr > th, .block--responsive > .table > tbody > tr > td, .block--responsive > .table > tfoot > tr > th, .block--responsive > .table > tfoot > tr > td {
+          .block--responsive > .table > thead > tr > th, .block--responsive > .table--bordered > thead > tr > th, .block--responsive > .table--striped > thead > tr > th, .block--responsive > .table--hover > thead > tr > th, .block--responsive > .table > thead > tr > td, .block--responsive > .table--bordered > thead > tr > td, .block--responsive > .table--striped > thead > tr > td, .block--responsive > .table--hover > thead > tr > td, .block--responsive > .table > tbody > tr > th, .block--responsive > .table--bordered > tbody > tr > th, .block--responsive > .table--striped > tbody > tr > th, .block--responsive > .table--hover > tbody > tr > th, .block--responsive > .table > tbody > tr > td, .block--responsive > .table--bordered > tbody > tr > td, .block--responsive > .table--striped > tbody > tr > td, .block--responsive > .table--hover > tbody > tr > td, .block--responsive > .table > tfoot > tr > th, .block--responsive > .table--bordered > tfoot > tr > th, .block--responsive > .table--striped > tfoot > tr > th, .block--responsive > .table--hover > tfoot > tr > th, .block--responsive > .table > tfoot > tr > td, .block--responsive > .table--bordered > tfoot > tr > td, .block--responsive > .table--striped > tfoot > tr > td, .block--responsive > .table--hover > tfoot > tr > td {
             white-space: nowrap; } }
 
-.table {
+.table, .table--bordered, .table--striped, .table--hover {
   width: 100%;
   max-width: 100%;
   margin: 0 0 1rem 0;
   font-size: 1rem; }
-  .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+  .table > thead > tr > th, .table--bordered > thead > tr > th, .table--striped > thead > tr > th, .table--hover > thead > tr > th, .table > thead > tr > td, .table--bordered > thead > tr > td, .table--striped > thead > tr > td, .table--hover > thead > tr > td, .table > tbody > tr > th, .table--bordered > tbody > tr > th, .table--striped > tbody > tr > th, .table--hover > tbody > tr > th, .table > tbody > tr > td, .table--bordered > tbody > tr > td, .table--striped > tbody > tr > td, .table--hover > tbody > tr > td, .table > tfoot > tr > th, .table--bordered > tfoot > tr > th, .table--striped > tfoot > tr > th, .table--hover > tfoot > tr > th, .table > tfoot > tr > td, .table--bordered > tfoot > tr > td, .table--striped > tfoot > tr > td, .table--hover > tfoot > tr > td {
     padding: 0.5rem;
     line-height: 1.45em;
     vertical-align: top;
     border-top: 1px solid #e5e5e5; }
-  .table > thead > tr > th {
+  .table > thead > tr > th, .table--bordered > thead > tr > th, .table--striped > thead > tr > th, .table--hover > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 2px solid #e5e5e5; }
-  .table > caption + thead > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > th, .table > thead:first-child > tr:first-child > td {
+  .table > caption + thead > tr:first-child > th, .table--bordered > caption + thead > tr:first-child > th, .table--striped > caption + thead > tr:first-child > th, .table--hover > caption + thead > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table--bordered > caption + thead > tr:first-child > td, .table--striped > caption + thead > tr:first-child > td, .table--hover > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table--bordered > colgroup + thead > tr:first-child > th, .table--striped > colgroup + thead > tr:first-child > th, .table--hover > colgroup + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table--bordered > colgroup + thead > tr:first-child > td, .table--striped > colgroup + thead > tr:first-child > td, .table--hover > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > th, .table--bordered > thead:first-child > tr:first-child > th, .table--striped > thead:first-child > tr:first-child > th, .table--hover > thead:first-child > tr:first-child > th, .table > thead:first-child > tr:first-child > td, .table--bordered > thead:first-child > tr:first-child > td, .table--striped > thead:first-child > tr:first-child > td, .table--hover > thead:first-child > tr:first-child > td {
     border-top: 0; }
-  .table > tbody + tbody {
+  .table > tbody + tbody, .table--bordered > tbody + tbody, .table--striped > tbody + tbody, .table--hover > tbody + tbody {
     border-top: 2px solid #e5e5e5; }
-  .table .table {
+  .table .table, .table--bordered .table, .table--striped .table, .table--hover .table, .table .table--bordered, .table--bordered .table--bordered, .table--striped .table--bordered, .table--hover .table--bordered, .table .table--striped, .table--bordered .table--striped, .table--striped .table--striped, .table--hover .table--striped, .table .table--hover, .table--bordered .table--hover, .table--striped .table--hover, .table--hover .table--hover {
     background-color: white; }
-  .table tr.active, .table td.active, .table th.active {
+  .table tr.active, .table--bordered tr.active, .table--striped tr.active, .table--hover tr.active, .table td.active, .table--bordered td.active, .table--striped td.active, .table--hover td.active, .table th.active, .table--bordered th.active, .table--striped th.active, .table--hover th.active {
     background-color: #f4f4f4; }
-  .table tr.success, .table td.success, .table th.success {
+  .table tr.success, .table--bordered tr.success, .table--striped tr.success, .table--hover tr.success, .table td.success, .table--bordered td.success, .table--striped td.success, .table--hover td.success, .table th.success, .table--bordered th.success, .table--striped th.success, .table--hover th.success {
     background-color: #dff0d7; }
-  .table tr.info, .table td.info, .table th.info {
+  .table tr.info, .table--bordered tr.info, .table--striped tr.info, .table--hover tr.info, .table td.info, .table--bordered td.info, .table--striped td.info, .table--hover td.info, .table th.info, .table--bordered th.info, .table--striped th.info, .table--hover th.info {
     background-color: #d8edf8; }
-  .table tr.warning, .table td.warning, .table th.warning {
+  .table tr.warning, .table--bordered tr.warning, .table--striped tr.warning, .table--hover tr.warning, .table td.warning, .table--bordered td.warning, .table--striped td.warning, .table--hover td.warning, .table th.warning, .table--bordered th.warning, .table--striped th.warning, .table--hover th.warning {
     background-color: #fcf8e2; }
-  .table tr.danger, .table td.danger, .table th.danger {
+  .table tr.danger, .table--bordered tr.danger, .table--striped tr.danger, .table--hover tr.danger, .table td.danger, .table--bordered td.danger, .table--striped td.danger, .table--hover td.danger, .table th.danger, .table--bordered th.danger, .table--striped th.danger, .table--hover th.danger {
     background-color: #f2dede; }
 
 .table--bordered {
@@ -871,6 +871,46 @@ a.button--circle, .button--circle[ng-click], button.button--circle, input[type="
     width: 1.2rem;
     height: 1.2rem; }
 
+.nav-tabs {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: 1px solid #c8c8c8; }
+  .nav-tabs li {
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    margin: 0 1rem -1px;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all .3s ease-in; }
+    .nav-tabs li a, .nav-tabs li [ng-click] {
+      display: inline-block;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      padding: 0.6rem 1rem;
+      color: #c8c8c8;
+      -webkit-touch-callout: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      transition: all .3s ease-in; }
+      .nav-tabs li a:hover, .nav-tabs li [ng-click]:hover {
+        text-decoration: none; }
+    .nav-tabs li:hover {
+      border-bottom-color: #828282; }
+      .nav-tabs li:hover a, .nav-tabs li:hover [ng-click] {
+        color: #828282; }
+    .nav-tabs li.active, .nav-tabs li.active:hover {
+      border-bottom-color: #4484cc; }
+      .nav-tabs li.active a, .nav-tabs li.active [ng-click], .nav-tabs li.active:hover a, .nav-tabs li.active:hover [ng-click] {
+        color: #4484cc; }
+
 .input {
   position: relative;
   z-index: 1;
@@ -998,6 +1038,9 @@ a.button--circle, .button--circle[ng-click], button.button--circle, input[type="
 
 [ng-click] {
   cursor: pointer; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
 
 .spinner-wrapper {
   position: fixed;

@@ -1,0 +1,44 @@
+.nav-tabs {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-bottom: 1px solid $tablulator--border-color;
+
+    li {
+        display: inline-block;
+        border-bottom: 3px solid transparent;
+        margin: 0 1rem -1px;
+        @include user-select(none);
+        transition: all .3s ease-in;
+
+        a {
+            display: inline-block;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            padding: 0.6rem 1rem;
+            color: $tablulator--border-color;
+            @include user-select(none);
+            transition: all .3s ease-in;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &:hover {
+            border-bottom-color: $tablulator--color;
+
+            a {
+                color: $tablulator--color;
+            }
+        }
+
+        &.active, &.active:hover {
+            border-bottom-color: $a--link;
+
+            a {
+                color: $a--link;
+            }
+        }
+    }
+}

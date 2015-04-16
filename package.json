@@ -1,7 +1,7 @@
 {
   "name": "yoso-styles",
   "description": "Styling package for yoso components.",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "homepage": "https://github.com/doroppu/yoso-style",
   "bugs": "https://github.com/doroppu/yoso-style/issues",
   "license": "none",
@@ -33,11 +33,5 @@
     "gulp-scss-lint": "^0.1.10",
     "gulp-util": "^3.0.4",
     "node-sass": "^3.0.0-beta.4"
-  },
-  "dependencies": {},
-  "browserify": {
-    "transform": [
-      "partialify"
-    ]
   }
 }
