@@ -5,34 +5,34 @@
 //
 // alignments
 //
-.text-center {
+.text-align--center {
     text-align: center;
 }
 
-.text-left {
+.text-align--left {
     text-align: left;
 }
 
-.text-right {
+.text-align--right {
     text-align: right;
 }
 
-.text-justify {
+.text-align--justify {
     text-align: justify;
 }
 
-.text-nowrap {
+.text--nowrap {
     white-space: nowrap;
 }
 
-.text-lowercase {
+.text--lowercase {
     text-transform: lowercase;
 }
 
-.text-uppercase {
+.text--uppercase {
     text-transform: uppercase;
 }
 
-.text-capitalize {
+.text--capitalize {
     text-transform: capitalize;
 }

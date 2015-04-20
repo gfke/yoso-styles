@@ -5,7 +5,7 @@
 // Load angular directives
 //
 //
-[ng-click], [ui-sref] {
+a[ng-click], a[ui-sref] {
     @extend a;
     cursor: pointer;
 }
