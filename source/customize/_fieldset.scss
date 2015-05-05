@@ -1,0 +1,120 @@
+/*
+ * Fieldset
+ *
+ * Override the default input and button elements.
+ */
+
+@mixin fieldset($type: inline-flex) {
+    display: $type;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    overflow: hidden;
+    box-sizing: border-box;
+    vertical-align: top;
+    border: 1px solid $fieldset-hint-color;
+    border-radius: .4em;
+    font-size: $fieldset-font-size;
+}
+
+@mixin fieldset-additionals($padding: .25em .5em, $icon-valign: text-top) {
+    flex: .000001 0 auto;
+    box-sizing: border-box;
+    min-width: 1.5em;
+    padding: $padding;
+    font-size: 1em;
+    text-align: center;
+    color: $fieldset-hint-color;
+
+    svg {
+        width: 1em;
+        height: 1em;
+        padding-top: 0.1em;
+        vertical-align: $icon-valign; // middle or text-top
+
+        path {
+            fill: $fieldset-hint-color;
+        }
+    }
+}
+
+.fieldset {
+    display: inline-block;
+
+    &__border {
+        @include fieldset(inline-flex);
+
+        &--block {
+            @include fieldset(flex);
+        }
+    }
+
+    &__label {
+        padding-top: .35em;
+        font-size: $fieldset-font-size;
+        line-height: 2.1em;
+        vertical-align: top;
+
+        &--left {
+            @extend .fieldset__label;
+            padding-right: 1em;
+        }
+
+        &--right {
+            @extend .fieldset__label;
+            padding-left: 1em;
+        }
+
+        &--block {
+            display: block;
+            font-size: 1rem;
+        }
+    }
+
+    &__input {
+        flex: 1 0 auto;
+        padding: .39em .25em .4235em;
+
+        input[type="text"],
+        input[type="password"],
+        input[type="search"] {
+            display: block;
+            font-family: $font-family--default;
+            box-sizing: border-box;
+            font-size: 1em;
+            font-weight: 100;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+
+            &::-webkit-input-placeholder,
+            &::-moz-placeholder,          // firefox 19+
+            &:-ms-input-placeholder,      // ie
+            &:-moz-placeholder {
+                font-weight: 100;
+                color: $fieldset-hint-color;
+            }
+        }
+    }
+
+    &__hint {
+        font-size: .7em;
+        color: $fieldset-hint-color;
+        padding: .25rem 0;
+
+        &--right {
+            @extend .fieldset__hint;
+            text-align: right;
+        }
+    }
+
+    &__before {
+        @include fieldset-additionals();
+    }
+
+    &__after {
+        @include fieldset-additionals();
+    }
+}

@@ -8,32 +8,25 @@
 //   <div class="spinner-progress"><div>Loading…</div></div>
 //
 
-
-//
-// Variables
-
-$spinner-progress-color: rgb(255, 255, 255);
-
 //
 // Animations
-
+//
 @keyframes spinner-progress-spin {
     to { transform: rotate(1turn); }
 }
 
-
 //
-// Spinner
-
-.spinner-progress {
+// mixin
+//
+@mixin spinner-progress($color: rgb(0, 0, 0), $size: 1em) {
     position: relative;
     display: inline-block;
     width: 5em;
     height: 5em;
     margin: 0 .5em;
-    font-size: 40px;
     text-indent: 999em;
     overflow: hidden;
+    font-size: $size;
     animation: spinner-progress-spin 1s infinite steps(8);
 
     &:before,
@@ -47,29 +40,36 @@ $spinner-progress-color: rgb(255, 255, 255);
         width: .5em;
         height: 1.5em;
         border-radius: .2em;
-        background-color: rgba($spinner-progress-color, 0.2);
-        box-shadow: 0 3.5em rgba($spinner-progress-color, 0.2); // container height - part height
+        background-color: rgba($color, 0.2);
+        box-shadow: 0 3.5em rgba($color, 0.2); // container height - part height
         transform-origin: 50% 2.5em; // container height / 2
     }
 
     &:before {
-        background-color: rgba($spinner-progress-color, 1);
+        background-color: rgba($color, 1);
     }
 
     &:after {
         transform: rotate(-45deg);
-        background-color: rgba($spinner-progress-color, 0.8);
+        background-color: rgba($color, 0.8);
     }
 
     & > div {
         &:before {
             transform: rotate(-90deg);
-            background-color: rgba($spinner-progress-color, 0.6);
+            background-color: rgba($color, 0.6);
         }
 
         &:after {
             transform: rotate(-135deg);
-            background-color: rgba($spinner-progress-color, 0.4);
+            background-color: rgba($color, 0.4);
         }
     }
+}
+
+//
+// Spinner
+//
+.spinner-progress {
+    @include spinner-progress($spinner--color);
 }

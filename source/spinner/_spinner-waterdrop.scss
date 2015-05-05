@@ -41,9 +41,10 @@
     }
 }
 
-// Spinner
-
-.spinner-waterdrop {
+//
+// Mixin
+//
+@mixin spinner-waterdrop($color: rgb(0, 0, 0)) {
     position: absolute;
     font-size: 5em;
 
@@ -59,8 +60,8 @@
         background: transparent;
         border-radius: 50%;
         text-indent: 999em;
-        color: rgb(255, 255, 255);
-        border-color: rgb(255, 255, 255);
+        color: $color;
+        border-color: $color;
 
         &:nth-child(1) {
             width: 1.5em;
@@ -91,4 +92,11 @@
             text-indent: 0em;
         }
     }
+}
+
+//
+// Spinner
+//
+.spinner-waterdrop {
+    @include spinner-waterdrop($spinner--color);
 }

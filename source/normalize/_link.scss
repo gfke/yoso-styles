@@ -16,6 +16,11 @@ a {
         outline: none;
     }
 
+    &:visited {
+        color: $a--visited;
+        outline: none;
+    }
+
     &:hover {
         color: $a--hover;
         outline: none;
@@ -24,11 +29,6 @@ a {
 
     &:active {
         color: $a--active;
-        outline: none;
-    }
-
-    &:visited {
-        color: $a--visited;
         outline: none;
     }
 

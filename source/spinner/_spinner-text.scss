@@ -24,15 +24,15 @@
 //
 // Mixin to display written text like "loading" as spinner using css animation.
 //
-// @param letters   (integer) Text length
+// @param steps   (integer) Text length
 // @param timeSteps (integer) Time in ms between letter animation
 // @param duration  (integer) Duration in ms of the Animation.
 
-@mixin spinner-text($_letters: 10, $_timeSteps: 200, $_duration: 0) {
+@mixin spinner-text($_steps: 10, $_timeSteps: 200, $_duration: 0) {
     display: inline-block;
 
     @if $_duration == 0 {
-        $_duration: $_letters*$_timeSteps;
+        $_duration: $_steps*$_timeSteps;
     }
 
     & > span {
@@ -42,7 +42,7 @@
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
 
-        @for $_i from 0 through $_letters {
+        @for $_i from 0 through $_steps {
             &:nth-child(#{$_i+1}) {
                 animation-delay: #{$_i*$_timeSteps}ms;
             }

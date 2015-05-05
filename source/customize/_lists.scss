@@ -1,0 +1,100 @@
+//
+// Lists
+//
+
+.list {
+    &--unstyled {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    // Inline turns list items into inline-block
+    &--inline {
+        padding-left: 0;
+        list-style: none;
+        margin-left: .35rem;
+
+        > li {
+            display: inline-block;
+            padding-left: .35rem;
+            padding-right: .35rem;
+        }
+    }
+
+    &--flat {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        ul, ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            display: block;
+        }
+    }
+
+    &--compact {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 65rem;
+
+        .list__item {
+            clear: both;
+        }
+
+        .list__item--left {
+            float: left;
+            margin: 0 2.5rem 0 0;
+            padding: 1.25rem 0 2.85rem;
+            width: 30%;
+            max-width: 18.75rem;
+            border-top: 1px solid #cecece;
+            overflow: hidden;
+        }
+
+        .list__item--right {
+            padding: 1.25rem 0 2.85rem;
+            border-top: 1px solid #cecece;
+            overflow: hidden;
+        }
+    }
+
+    &--compact-middle {
+        @extend .list--compact;
+
+        .list__item--left {
+            border: none;
+            margin: 0 2.5rem 0 0;
+            padding: 1.25rem 0 1.25rem;
+        }
+
+        .list__item--right {
+            margin: 0 0 1.25rem 0;
+            padding: 1.25rem 0 1.25rem 1.5rem;
+            border-top: none;
+            border-left: 1px solid #cecece;
+        }
+    }
+}
+
+
+.dlist--horizontal {
+    dt {
+        float: left;
+        width: 10rem;
+        overflow: hidden;
+        clear: left;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    dd {
+        margin-left: 12rem;
+    }
+}

@@ -8,7 +8,7 @@
 //   <div class="spinner-ball my_spinner"><span></span><span></span><span></span></div>
 //
 // Extend CSS:
-//   .my_spinner > div {
+//   .my_spinner > span {
 //       background-color: blue;
 //   }
 
@@ -25,11 +25,10 @@
     }
 }
 
-
 //
-// Spinner
-
-.spinner-ball {
+// mixin
+//
+@mixin spinner-ball($color: rgb(0, 0, 0)) {
     width: 100%;
     text-align: center;
 
@@ -38,7 +37,7 @@
         width: 1em;
         height: 1em;
         border-radius: 100%;
-        background-color: rgb(255,255,255);
+        background-color: $color;
         animation: spinner-ball-bouncedelay 1.4s infinite ease-in-out;
         // Prevent first frame from flickering when animation starts
         animation-fill-mode: both;
@@ -51,4 +50,11 @@
             animation-delay: -0.16s;
         }
     }
+}
+
+//
+// Spinner
+//
+.spinner-ball {
+    @include spinner-ball($spinner--color);
 }
