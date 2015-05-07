@@ -1,0 +1,75 @@
+//
+// Spinner Line Rotage
+//
+// Displays 10 vertical lines rotaging and changing their color.
+//
+// Example HTML:
+//   <div class="spinner-line-rotage">
+//      <div></div>
+//      <div></div>
+//      <div></div>
+//      <div></div>
+//      <div></div>
+//      <div></div>
+//      <div></div>
+//      <div></div>
+//      <div></div>
+//      <div></div>
+//   </div>
+//
+
+
+//
+// Animations
+@keyframes spinner-linerotage{
+    0% {
+        transform: rotateX(0deg);
+        filter: brightness(.5);
+    }
+
+    50% {
+        filter: brightness(1);
+    }
+
+    51% {
+        filter:brightness(.5);
+    }
+
+    100% {
+        transform: rotateX(359deg);
+        filter: brightness(1);
+    }
+}
+
+//
+// mixin
+//
+@mixin spinner-linerotage($color: $spinner--color, $elements: 10) {
+    display: flex;
+    box-sizing: border-box;
+    font-size: 1rem;
+    width: 5em;
+    justify-content: space-between;
+
+    > * {
+        box-sizing: border-box;
+        height: 2em;
+        width: 5%;
+        background: $color;
+        -webkit-animation: spinner-linerotage 2s infinite;
+        -webkit-animation-timing-function: linear;
+
+        @for $i from 1 to $elements+1 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i/10}s;
+            }
+        }
+    }
+}
+
+//
+// Spinner
+//
+.spinner-line-rotage {
+    @include spinner-linerotage();
+}

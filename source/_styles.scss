@@ -1,8 +1,6 @@
 // Mixins
 @import 'mixins/clearfix';
 @import 'mixins/user-select';
-
-
 // normalize
 @import 'normalize/html';
 @import 'normalize/body';
@@ -27,7 +25,6 @@
 @import 'normalize/button';
 @import 'normalize/img';
 @import 'normalize/svg';
-
 // customize
 @import 'customize/browsehappy';
 @import 'customize/responsive';
@@ -43,11 +40,8 @@
 @import 'customize/button';
 @import 'customize/tabulator';
 @import 'customize/input';
-
 // vendor
 @import 'vendor/angular';
-
-
 // spinner
 @import 'spinner/spinner';
 @import 'spinner/spinner-ball';
@@ -55,6 +49,7 @@
 @import 'spinner/spinner-progress';
 @import 'spinner/spinner-circle';
 @import 'spinner/spinner-waterdrop';
-
+@import 'spinner/spinner-linerotage';
+@import 'spinner/spinner-line';
 // animation
 @import 'animation/animate';
