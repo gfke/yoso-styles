@@ -45,46 +45,59 @@
 
     &__border {
         @include fieldset(inline-flex);
-
-        &--block {
-            @include fieldset(flex);
-        }
     }
 
     &__label {
-        padding-top: .35em;
+        display: inline;
         font-size: $fieldset-font-size;
         line-height: 2.1em;
         vertical-align: top;
 
-        &--left {
+        &--inline-left, &--left {
             @extend .fieldset__label;
+            text-align: left;
             padding-right: 1em;
         }
 
-        &--right {
+        &--inline-right, &--right {
             @extend .fieldset__label;
+            text-align: right;
             padding-left: 1em;
         }
 
-        &--block {
+        &--block, &--block-left {
             display: block;
+            padding: .35em 0;
+            text-align: left;
             font-size: 1rem;
+        }
+
+        &--block-right {
+            @extend .fieldset--block;
+            text-align: right;
+        }
+
+        &--block-center {
+            @extend .fieldset--block;
+            text-align: center;
         }
     }
 
-    &__input {
+    &__input, &__input--left {
         flex: 1 0 auto;
         padding: .39em .25em .4235em;
+        text-align: left;
 
         input[type="text"],
         input[type="password"],
         input[type="search"] {
             display: block;
+            width: 100%;
             font-family: $font-family--default;
             box-sizing: border-box;
             font-size: 1em;
             font-weight: 100;
+            text-align: left;
             padding: 0;
             border: none;
             background-color: transparent;
@@ -97,9 +110,31 @@
                 color: $fieldset-hint-color;
             }
         }
+
+        &--right {
+            @extend .fieldset__input;
+            text-align: right;
+
+            input[type="text"],
+            input[type="password"],
+            input[type="search"] {
+                text-align: right;
+            }
+        }
+
+        &--center {
+            @extend .fieldset__input;
+            text-align: center;
+
+            input[type="text"],
+            input[type="password"],
+            input[type="search"] {
+                text-align: center;
+            }
+        }
     }
 
-    &__hint {
+    &__hint, &__hint--left {
         font-size: .7em;
         color: $fieldset-hint-color;
         padding: .25rem 0;
@@ -107,6 +142,11 @@
         &--right {
             @extend .fieldset__hint;
             text-align: right;
+        }
+
+        &--center {
+            @extend .fieldset__hint;
+            text-align: center;
         }
     }
 
@@ -116,5 +156,14 @@
 
     &__after {
         @include fieldset-additionals();
+    }
+
+    &--block {
+        @extend .fieldset;
+        display: block;
+
+        .fieldset__border {
+            @include fieldset(flex);
+        }
     }
 }
