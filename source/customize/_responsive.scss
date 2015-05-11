@@ -38,7 +38,7 @@ only screen and (min-resolution: 2dppx) and (min-width: $resolution--large),
     // small screens on 96-109ppi, non retina
 only screen and (min-width: $resolution--large) {
     html {
-        font-size: 100%;
+        font-size: $resolution-font-size--xlarge;
     }
 }
 
@@ -54,7 +54,7 @@ only screen and (min-resolution: 2dppx) and (max-width: $resolution--large),
     // small screens on 96-109ppi, non retina
 only screen and (max-width: $resolution--large) {
     html {
-        font-size: 100%;
+        font-size: $resolution-font-size--large;
     }
 }
 
@@ -70,7 +70,7 @@ only screen and (min-resolution: 2dppx) and (max-width: $resolution--medium),
     // small screens on 96-109ppi, non retina
 only screen and (max-width: $resolution--medium) {
     html {
-        font-size: 87.50%;
+        font-size: $resolution-font-size--medium;
     }
 }
 
@@ -86,7 +86,7 @@ only screen and (min-resolution: 2dppx) and (max-width: $resolution--small),
     // small screens on 96-109ppi, non retina
 only screen and (max-width: $resolution--small) {
     html {
-        font-size: 75.00%;
+        font-size: $resolution-font-size--small;
     }
 }
 
@@ -102,6 +102,6 @@ only screen and (min-resolution: 2dppx) and (max-width: $resolution--mini),
     // small screens on 96-109ppi, non retina
 only screen and (max-width: $resolution--mini) {
     html {
-        font-size: 62.50%;
+        font-size: $resolution-font-size--mini;
     }
 }
