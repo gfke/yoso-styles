@@ -27,7 +27,7 @@
         }
 
         &:hover {
-            border-bottom-color: $tablulator--color;
+            border-color: $tablulator--color;
 
             a {
                 color: $tablulator--color;
@@ -35,11 +35,36 @@
         }
 
         &.active, &.active:hover {
-            border-bottom-color: $a--link;
+            border-color: $a--link;
 
             a {
                 color: $a--link;
             }
+        }
+    }
+
+    &--top {
+        @extend .nav-tabs;
+        border-bottom: none;
+        border-top: 1px solid $tablulator--border-color;
+
+        li {
+            border-bottom: none;
+            border-top: 2px solid transparent;
+        }
+    }
+}
+
+.nav-subtabs {
+    @extend .nav-tabs;
+    border: none;
+
+    &--top {
+        @extend .nav-subtabs;
+
+        li {
+            border-bottom: none;
+            border-top: 1px solid transparent;
         }
     }
 }
