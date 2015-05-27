@@ -1,7 +1,7 @@
 {
   "name": "yoso-styles",
   "description": "Styling package for yoso components.",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "homepage": "https://github.com/doroppu/yoso-style",
   "bugs": "https://github.com/doroppu/yoso-style/issues",
   "license": "none",
