@@ -1,0 +1,41 @@
+//
+// icon-letter
+//
+// Mixin to display pseudo circle item with a letter inside.
+//
+// Parameters:
+//   letter:           (string) The letter to display
+//   color:            (color)  The font color
+//   background-color: (color) The background color
+//
+// Example:
+// .icon-success{
+//     @include icon-letter('S', rgb(0, 0, 0), rgb(0, 255, 0);
+//     font-size: 38px;
+// }
+//
+// You can override mixin all settings and extend them inside your class.
+//
+@mixin icon-letter($letter: 'G', $color: rgb(255, 255, 255), $background-color: rgb(120, 120, 120)) {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    width: 2.4em;
+    height: 2.4em;
+    color: $color;
+    background-color: $background-color;
+    border-radius: 9999em;
+
+    &:after {
+        content: $letter;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 1.4em;
+        line-height: 1.74em;
+    }
+}
