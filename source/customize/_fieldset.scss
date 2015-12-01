@@ -45,7 +45,7 @@
 
     &__border {
         @include fieldset(inline-flex);
-        
+
         &__changed {
             border-color: #e37a1f;
         }
