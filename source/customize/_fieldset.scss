@@ -45,6 +45,10 @@
 
     &__border {
         @include fieldset(inline-flex);
+
+        &__changed {
+            border-color: rgba(227, 122, 31, 1);
+        }
     }
 
     &__label {
